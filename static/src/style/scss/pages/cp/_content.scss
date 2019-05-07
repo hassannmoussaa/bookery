@@ -1,0 +1,43 @@
+/* ========== CP CONTENT ========= */
+
+#cp-content {
+    .semi-box {
+        width: 50%;
+        float: left;
+        &:first-of-type {
+            @if $direction==ltr {
+                padding-right: 15px;
+            }
+            @else {
+                padding-left: 15px;
+            }
+        }
+        &:last-of-type {
+            @if $direction==ltr {
+                padding-left: 15px;
+            }
+            @else {
+                padding-right: 15px;
+            }
+        }
+    }
+    @include media-breakpoint-down(md) {
+        .semi-box {
+            float: none;
+            width: 100%;
+            &:first-of-type,
+            &:last-of-type {
+                padding: 0;
+            }
+        }
+    }
+    @include media-breakpoint-down(xs) {
+        .semi-box {
+            &:first-of-type,
+            &:last-of-type {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+        }
+    }
+}

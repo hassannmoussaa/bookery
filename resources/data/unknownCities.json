@@ -1,0 +1,2172 @@
+[
+    {
+        "name": "الصيفي",
+        "district": "Beirut",
+        "area": "Beirut"
+    },
+    {
+        "name": "البساتين",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "البستان",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "عين الزرقا",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "بنت جبيل حي الجامع",
+        "district": "Bint Jbeil",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "الدلافه",
+        "district": "Hasbaya",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "حاصبيا حي العين",
+        "district": "Hasbaya",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "باب مارع",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "البص قسم 1",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "البص قسم 3",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "البص قسم 5",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "البياض",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الجبين",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الحنيه",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الرشيديه",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الرمادية",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الشهابيه",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الظهيرة",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "العباسيه",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الكنيسة",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "المالكيه",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "باريش",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "مشغره التحتا",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "مشغره الفوقا",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "راشيا الفوقا",
+        "district": "Rachaya",
+        "area": "Bekaa"
+    },
+    {
+        "name": "زحلة البرباره",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "زحلة مار الياس",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "زحلة مار انطونيوس",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "علي النهري",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الهرمل حي الحارة",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الخريبه حي الجامع",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "بريتال شرقي",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الشياح بئر العبد",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "حصرايل",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "عين الصوانة",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "كفرقطرة",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "سبنيه",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "حي الصلح",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "بيت شاما",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "بريتال عين البنيه",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "بريتال غربي",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "مزرعة سجد",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "زحلة مار مخايل",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "حنوية",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "سلعا",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "شمع",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "صور حي الارثوذكس",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "صور حي الجامع",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "صور حي الجورة",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "صور حي الكاثوليك",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "صور حي المصاروي",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "معركة",
+        "district": "Sour",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الجرمق",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الحرف",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الحسانيه",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الحمصيه",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الريحان",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "السريرة",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الغباطية",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "القطراني",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "المجيدل",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الميدان",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "انان",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "بحنين وكفرتعلا",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "حيتولي ووادي الليمون",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "روم",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "ريمات وشقاديف",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "سجد",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "سنيا",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "صبّاح",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "قتالي",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "قطين وحيداب",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "كفرجرة",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "مزرعة المطحنة",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "روم",
+        "district": "Jezzine",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "ارزي",
+        "district": "Saida",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "اركي",
+        "district": "Saida",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الحارة",
+        "district": "Saida",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الحجة",
+        "district": "Saida",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "القرية",
+        "district": "Saida",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "المعمرية",
+        "district": "Saida",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الهلالية",
+        "district": "Saida",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "بقسطه",
+        "district": "Saida",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "خرطوم",
+        "district": "Saida",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "زيتا",
+        "district": "Saida",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "كفريا",
+        "district": "Saida",
+        "area": "South Lebanon"
+    },
+    {
+        "name": "الطيري",
+        "district": "Bint Jbeil",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "بنت جبيل حي البركه",
+        "district": "Bint Jbeil",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "بنت جبيل حي الحسينيه",
+        "district": "Bint Jbeil",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "بنت جبيل حي الحوارة",
+        "district": "Bint Jbeil",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "بنت جبيل حي عين الصغيره",
+        "district": "Bint Jbeil",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "تبنين حي آل بري",
+        "district": "Bint Jbeil",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "تبنين حي التحتاني",
+        "district": "Bint Jbeil",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "تبنين حي الفوقاني",
+        "district": "Bint Jbeil",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "تبنين حي الكاثوليك",
+        "district": "Bint Jbeil",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "شقرا",
+        "district": "Bint Jbeil",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "عين ابل حي الدير",
+        "district": "Bint Jbeil",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "عين ابل حي الكنيسة",
+        "district": "Bint Jbeil",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "مارون",
+        "district": "Bint Jbeil",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "الخلوات",
+        "district": "Hasbaya",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "الكفير",
+        "district": "Hasbaya",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "المجيدية",
+        "district": "Hasbaya",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "حاصبيا حي السراي",
+        "district": "Hasbaya",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "حاصبيا حي الفوقاني",
+        "district": "Hasbaya",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "حاصبيا حي صفيفة",
+        "district": "Hasbaya",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "شبعا الشرقي",
+        "district": "Hasbaya",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "شبعا الغربي",
+        "district": "Hasbaya",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "الجديدة حي السراي",
+        "district": "Marjeyoun",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "الجديدة حي العيون",
+        "district": "Marjeyoun",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "الجديدة حي القلعة",
+        "district": "Marjeyoun",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "الجديدة حي المدارس",
+        "district": "Marjeyoun",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "الصوانة",
+        "district": "Marjeyoun",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "الطيبة",
+        "district": "Marjeyoun",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "القصير",
+        "district": "Marjeyoun",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "القليعة",
+        "district": "Marjeyoun",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "القنطرة",
+        "district": "Marjeyoun",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "دبين",
+        "district": "Marjeyoun",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "سردا والعمرا",
+        "district": "Marjeyoun",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "عتشيت",
+        "district": "Marjeyoun",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "عين عرب",
+        "district": "Marjeyoun",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "الشرقية",
+        "district": "Nabatiyeh",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "القصيبة",
+        "district": "Nabatiyeh",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "الكفور",
+        "district": "Nabatiyeh",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "النبطية التحتا حي البياض",
+        "district": "Nabatiyeh",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "النبطية التحتا حي المسيحيين",
+        "district": "Nabatiyeh",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "النبطية التحتا حي الميدان",
+        "district": "Nabatiyeh",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "تول",
+        "district": "Nabatiyeh",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "سيني",
+        "district": "Nabatiyeh",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "صير الغربية",
+        "district": "Nabatiyeh",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "عزه",
+        "district": "Nabatiyeh",
+        "area": "Nabatiyeh"
+    },
+    {
+        "name": "الروضه",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "المرج",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "المناره",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "المنصورة",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "تل ذنوب",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "خربة قنافار",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "عميق",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "غزه",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "قليا",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "كفريا",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "لوسيا",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "ميدون",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الشبرقية",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "قليا",
+        "district": "Bekaa West",
+        "area": "Bekaa"
+    },
+    {
+        "name": "البيره",
+        "district": "Rachaya",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الحوش",
+        "district": "Rachaya",
+        "area": "Bekaa"
+    },
+    {
+        "name": "العقبة",
+        "district": "Rachaya",
+        "area": "Bekaa"
+    },
+    {
+        "name": "حلوة",
+        "district": "Rachaya",
+        "area": "Bekaa"
+    },
+    {
+        "name": "راشيا حي الكواسبي",
+        "district": "Rachaya",
+        "area": "Bekaa"
+    },
+    {
+        "name": "راشيا حي الميدان",
+        "district": "Rachaya",
+        "area": "Bekaa"
+    },
+    {
+        "name": "سلساتا",
+        "district": "Rachaya",
+        "area": "Bekaa"
+    },
+    {
+        "name": "عين حرشه",
+        "district": "Rachaya",
+        "area": "Bekaa"
+    },
+    {
+        "name": "عين عرب",
+        "district": "Rachaya",
+        "area": "Bekaa"
+    },
+    {
+        "name": "كفردنيس",
+        "district": "Rachaya",
+        "area": "Bekaa"
+    },
+    {
+        "name": "مدوخا",
+        "district": "Rachaya",
+        "area": "Bekaa"
+    },
+    {
+        "name": "التويتة",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الدلهمية",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الفرزل التحتا",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الفرزل الفوقا",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الكرمه",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الناصرية",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الوقف",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "بتياس",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "تعلبايا",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "تل الاخضر",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "حاجي جبيلي",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "حي السلم",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "خضربك",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "زحلة الراسية التحتا",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "زحلة الراسية الفوقا",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "زحلة المعلقة الشمالي",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "زحلة الميدان الشرقي",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "زحلة الميدان الغربي",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "زحلة حوش الزراعنة",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "قب الياس التحتا",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "قب الياس الفوقا",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "كابوسية",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "ماسا",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "يوغون اولوك",
+        "district": "Zahleh",
+        "area": "Bekaa"
+    },
+    {
+        "name": "البستان",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "البويضة الحي الغربي",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "البويضة الشمالية",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "السويسة",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الشربين",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الشواغير التحتا",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الشواغير الفوقا",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "القصر",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الهرمل حي الوقف",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "زغرين",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "سهلات الماء",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "فيسان",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "قنافذ",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "مزرعة بيت الفقيه",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "وادي الرطل",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "وادي العس",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "وادي بنيت",
+        "district": "Hermel",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الانصار",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "البرانية حي المسيحيين",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "التوفيقيه",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الجديدة",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الحدث الشمالي",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الحدث الغربي",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الحلانية",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الخريبة",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الخضر حي آل الاشعل",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الخضر حي الشعب",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الخضر شرقي",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الخضر غربي",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الرام",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الريش حي الشرقي",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الريش حي الشميس",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الريش حي الغربي",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "السعيده",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "السفري",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الصوانية",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الطيبة",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "العقيدية",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "العلاق",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "العين",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الفاكهه حي مار جرجس",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "الكنيسه",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "النبي شيت حي طبشار",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "النبي شيت حي الجامع",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "النبي شيت حي الجنوبي",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "النبي شيت حي الشرقي",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "النبي شيت حي الشمالي",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "النبي شيت حي العريض",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "النبي شيت حي العقبه",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "النبي شيت حي الغربي",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "النبي نعام",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "النقره",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "اليونسية",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "برقا",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "بريتال اليونسية",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "بريتال حي التين",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "بريتال شميس",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "بريتال شميس غربي",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "بريتال عين الجوز",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "بيت صليبي",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "حام",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "حزين",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "حلبتا",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "حور تعلا حي الشعب",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "حور تعلا حي الوادي",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "حي الست",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "حي العباسيه",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "دورس الشحاديه",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "دورس حي البير",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "دورس حي السيدة",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "رماسا",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "سرعين الفوقا حي الجامع",
+        "district": "Baalbeck",
+        "area": "Bekaa"
+    },
+    {
+        "name": "اغميد",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "البساتين",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "البنيه",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الرجمة",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الرملية",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الشويفات حي الامراء",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الغابون",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "المنصورية",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "بحواره",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "بخشتيه",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "بطلون",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "بو زريده",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "دوير الرمان",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "سلفايا",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "شارون",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "شانيه",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "عاليه شمالي",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "عاليه غربي",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "عاليه قبلي",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "عاليه وسطاني",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "عين المرج",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "عين تراز",
+        "district": "Aley",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الحدث الشمالي",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الحدث قبلي",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الخريبه",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الشياح حي الكنيسة",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الشياح حي كرم الزيتون",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "العبادية",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الغبيري حي الجامع",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "القرية",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "القصيبة",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "القلعة",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الكنيسه",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "المريجة",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الهلالية",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "بتخنيه",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "برج البراجنة حي السنديان",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "برج البراجنة حي السياد",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "برج البراجنة حي المنشية",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "بطشيه",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "بعلشميه",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "تحويطة النهر",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "حارة البطم",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "حارة حريك حي الرويس",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "حارة حريك حي الكنيسة",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "حارة حريك قرانوح",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "دير خونا وتلتيته",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "صليما",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "وادي شحرور",
+        "district": "Baabda",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "البرجين",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "البطال",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الجليلية",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الجميلية",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الجيه",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الخريبة",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الزعرورية",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الفريديس",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الفوارة",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الكنيسة",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "المحتقرة ودير المخلص",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "المشرف",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "بعقلين التحتا",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "بعقلين الفوقا",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "جدرا - وادي الزينة",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "جون",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "سرجبال",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "شحيم حي البدوي",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "شحيم حي البيادر",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "شحيم حي السهلة",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "شحيم حي الشريفة",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "شحيم حي الوسطاني",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "شحيم حي شحرور",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "شوريت",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "عترين",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "علمان والبرغونية",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "عميق",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "كفرحي",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "كليليه",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "مجدلونا",
+        "district": "Chouf",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "اده",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "ادونيس وسنور",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الحصون",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الخاربة",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الراموط",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الريحانه",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "العاقورة - م",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الغابات",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "القطاره",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الكفر",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "المجدل",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "المزاريب",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "المغيري",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "المنصف",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "بشتليدا وفدار",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "بشلي",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "ترتج",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "جنه ومار سركيس",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "دملصا",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "شيخان",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "علمات/ج",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "علمات/ش",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "عنايا وكفربعال",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "عين الشلال",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "عين الغويبه",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "فرات",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "فرحت",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "قرطبا الجنوبية",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "قرطبا الشمالية",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "كفرمسحون",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "معاد",
+        "district": "Jbeil",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "ادما الدفنه",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "البوار",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الحصين",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الصفرا",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "العبره وشوان",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "العذرا",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الغينه",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الكفور",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "المراديه",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "النمورة و كفرجريف",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "بقعتوته",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "حياطا",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "زيتون",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "عرامون",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "غادير",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "غباله",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "غزير الجامع",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "غزير القناة",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "كفرتيه",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "هرهريا والقطين",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "وادي عين ورقه غوسطا",
+        "district": "Kesrwan",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الجديدة",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الجوار",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الخله",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الدوار",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الرابية",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الشاويه والقنيطره",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "العيون",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الغابة",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "الفريكه",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "المجذوب و مزهر",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "المروج",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "المسقى",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "المشرع",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "المنصورية",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "بيت الككو",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "بيت شباب تحتاني",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "بيت شباب فوقاني",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "زبوغا",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "سن الفيل حي البلده",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "سن الفيل حي الجديد",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "سن الفيل حي الحرج",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "قنابة صليما",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "كفرتيه",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "مار شعيا والمزكه",
+        "district": "Metn",
+        "area": "Mount Lebanon"
+    },
+    {
+        "name": "اده",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "اصيا - أسيا",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "البقيعه ومسرح",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "الدوق",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "الفتاحات وهربونا",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "بجدرفل",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "تولا",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "داعل",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "دير بلا",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "راشكيدا",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "رام",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "رشكده",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "زان",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "صغار",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "عرطز",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "عوره",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "غوما",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "قندولا",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "كفرحي",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "كفرشليمان",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "كوبا",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "كور",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "نحلا",
+        "district": "Batroun",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "قنات",
+        "district": "Becharreh",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "بيت منذر",
+        "district": "Becharreh",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "تولا",
+        "district": "Zgharta",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "مينا",
+        "district": "Tripoli",
+        "area": "North Lebanon"
+    },
+    {
+        "name": "طرابلس",
+        "district": "Tripoli",
+        "area": "North Lebanon"
+    }
+]

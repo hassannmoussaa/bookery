@@ -1,0 +1,24 @@
+{{$cleanDescription := StripTags .Description }}
+{{$description := $cleanDescription| TruncateChars 160 }}
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="{{.Title}}">
+<meta itemprop="description" content="{{$description}}">
+<meta itemprop="image" content="{{.Image}}">
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="article">
+<meta name="twitter:site" content="@username">
+<meta name="twitter:title" content="{{.Title}}">
+<meta name="twitter:description" content="{{$description}}">
+<meta name="twitter:creator" content="@username">
+<meta name="twitter:image" content="{{.Image}}">
+
+
+<!-- Open Graph data -->
+<meta property="og:title" content="{{.Title}}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{.PageURL}}" />
+<meta property="og:image" content="{{.Image}}" />
+<meta property="og:description" content="{{$description}}" />
+<meta property="og:site_name" content="web name" />

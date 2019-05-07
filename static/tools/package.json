@@ -1,0 +1,37 @@
+{
+  "name": "pill.html",
+  "version": "1.0.0",
+  "description": "Use this as a simple structure for a simple start to a simple site.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hassannmoussaa/pill.html.git"
+  },
+  "keywords": [
+    "starter",
+    "kit"
+  ],
+  "author": "Nehme Roumani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hassannmoussaa/pill.html/issues"
+  },
+  "homepage": "https://github.com/hassannmoussaa/pill.html#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-compass": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-util": "^3.0.7"
+  },
+  "dependencies": {
+    "gulp-imagemin": "^3.3.0",
+    "gulp-uglify": "^3.0.0",
+    "minimist": "^1.2.0",
+    "pump": "^1.0.2"
+  }
+}

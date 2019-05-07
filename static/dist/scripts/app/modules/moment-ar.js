@@ -1,0 +1,1 @@
+require(["moment","jquery"],function(a,t){var e=t(".date");e.length>0&&e.each(function(e,r){var m=(r=t(r)).data("utc-timestamp");if(m){var n="llll";r.data("date-format")&&(n=r.data("date-format")),r.html(a.unix(m).format(n))}})});

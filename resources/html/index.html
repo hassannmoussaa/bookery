@@ -1,0 +1,11 @@
+{{template "_head.html" . }}
+{{if IsCPPage .PageName }}
+{{template "cp/_index.html" . }}
+{{else if eq .PageName "cp-login"}}
+{{template "cp/_login.html" . }}
+{{else if eq .PageName "unlock-admin-account"}}
+{{template "_unlock-admin-account.html" . }}
+{{else}}
+{{template "_not-found.html" . }}
+{{end}}
+{{template "_footer.html" . }}

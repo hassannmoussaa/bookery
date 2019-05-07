@@ -1,0 +1,77 @@
+    /* ========== ENTRIES MANAGER ========== */
+
+    #entries-manager {
+        background-color: white;
+        overflow: hidden;
+        .entries-manager-title {
+            padding: 10px 15px;
+            text-transform: capitalize;
+            font-size: 20px;
+            font-weight: 600;
+            border-bottom: 1px solid #ddd;
+        }
+        label {
+            text-transform: capitalize;
+            margin-bottom: 2px;
+            input,
+            select,
+            .select2 {
+                margin-top: 5px;
+            }
+        }
+        .select2 {
+            display: block;
+            max-width: 100% !important;
+            .select2-selection {
+                height: 34px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                .select2-selection__rendered {
+                    line-height: 1.45;
+                    font-size: 14px;
+                }
+            }
+        }
+        .field-data {
+            margin-bottom: 10px;
+            font-size: 16px;
+            @include inline-block;
+            text-transform: capitalize;
+        }
+        form {
+            display: block;
+            clear: both;
+            overflow: hidden;
+            label {
+                margin-bottom: 10px;
+            }
+        }
+        .buttons-bar,
+        .button-bar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            .button {
+                min-width: 100px;
+            }
+        }
+        .buttons-bar {
+            .button {
+                &:first-of-type {
+                    @if $direction==ltr {
+                        float: left;
+                    }
+                    @else {
+                        float: right;
+                    }
+                }
+                &:last-of-type {
+                    @if $direction==rtl {
+                        float: left;
+                    }
+                    @else {
+                        float: right;
+                    }
+                }
+            }
+        }
+    }

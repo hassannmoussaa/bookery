@@ -1,0 +1,65 @@
+/* ======= POPUP ======== */
+
+#popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    left: 0;
+    background-color: transparentize(#000, 0.2);
+    z-index: 99;
+    .ok {
+        @if $direction==ltr {
+            float: right;
+        }
+        @else {
+            float: left;
+        }
+    }
+    .close-popup {
+        @if $direction==ltr {
+            float: left;
+        }
+        @else {
+            float: right;
+        }
+    }
+    .popup-box {
+        width: 280px;
+        padding: 10px;
+        @include translate(-50%, -50%, 0);
+        @if $direction==rtl {
+            text-align: right;
+        }
+        @else {
+            text-align: left;
+        }
+        top: 50%;
+        left: 50%;
+        background-color: white;
+        position: absolute;
+        overflow: hidden;
+        clear: both;
+        button,
+        .button {
+            min-width: 100px;
+        }
+        .field {
+            margin-bottom: 10px;
+        }
+        select {
+            margin-top: 5px;
+        }
+    }
+    @include media-breakpoint-up(540px) {
+        .navbar-opened & {
+            @if $direction==ltr {
+                left: 220px;
+            }
+            @else {
+                right: 220px;
+            }
+        }
+    }
+}

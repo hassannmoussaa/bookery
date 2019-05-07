@@ -1,0 +1,1705 @@
+[
+  {
+    "name": {
+      "en": "Houmayri",
+      "ar": "الحميري"
+    },
+    "district": "Sour",
+    "area": "South Lebanon",
+    "place_id": "ChIJfxO1HKKPHhUR7g7l8FzfnWQ",
+    "location": {
+      "lat": "33.2950779",
+      "lng": "35.3523746"
+    }
+  },
+  {
+    "name": {
+      "en": "Chehour",
+      "ar": "شحور"
+    },
+    "district": "Sour",
+    "area": "South Lebanon",
+    "place_id": "ChIJC4YDQ8iPHhURABRTq_YhO0w",
+    "location": {
+      "lat": "33.2997805",
+      "lng": "35.370483"
+    }
+  },
+  {
+    "name": {
+      "en": "Tayr Harfa",
+      "ar": "طيرحرفا"
+    },
+    "district": "Sour",
+    "area": "South Lebanon",
+    "place_id": "ChIJhZoZ7dMqHBUR1Nwce_DAIoA",
+    "location": {
+      "lat": "33.1269929",
+      "lng": "35.2190723"
+    }
+  },
+  {
+    "name": {
+      "en": "Majdal Zoun",
+      "ar": "مجدلزون"
+    },
+    "district": "Sour",
+    "area": "South Lebanon",
+    "place_id": "ChIJeQdVmKUqHBURMDJyfr6YGuc",
+    "location": {
+      "lat": "33.1512216",
+      "lng": "35.227049"
+    }
+  },
+  {
+    "name": {
+      "en": "Yanouh",
+      "ar": "يانوح"
+    },
+    "district": "Sour",
+    "area": "South Lebanon",
+    "place_id": "ChIJ5yeHbG5THxUR-LqUfR2BGcI",
+    "location": {
+      "lat": "34.1005841",
+      "lng": "35.8840367"
+    }
+  },
+  {
+    "name": {
+      "en": "Tayr Harfa",
+      "ar": "طيرحرفا"
+    },
+    "district": "Sour",
+    "area": "South Lebanon",
+    "place_id": "ChIJhZoZ7dMqHBUR1Nwce_DAIoA",
+    "location": {
+      "lat": "33.1269929",
+      "lng": "35.2190723"
+    }
+  },
+  {
+    "name": {
+      "en": "Aadloun",
+      "ar": "عدلون"
+    },
+    "district": "Sour",
+    "area": "South Lebanon",
+    "place_id": "ChIJO34L2buLHhURoDXwma-D5Zc",
+    "location": {
+      "lat": "33.4038299",
+      "lng": "35.2734051"
+    }
+  },
+  {
+    "name": {
+      "en": "Majdal Zoun",
+      "ar": "مجدلزون"
+    },
+    "district": "Sour",
+    "area": "South Lebanon",
+    "place_id": "ChIJeQdVmKUqHBURMDJyfr6YGuc",
+    "location": {
+      "lat": "33.1512216",
+      "lng": "35.227049"
+    }
+  },
+  {
+    "name": {
+      "en": "Chehour",
+      "ar": "شحور"
+    },
+    "district": "Sour",
+    "area": "South Lebanon",
+    "place_id": "ChIJC4YDQ8iPHhURABRTq_YhO0w",
+    "location": {
+      "lat": "33.2997805",
+      "lng": "35.370483"
+    }
+  },
+  {
+    "name": {
+      "en": "Louaizeh",
+      "ar": "اللويزه"
+    },
+    "district": "Jezzine",
+    "area": "South Lebanon",
+    "place_id": "ChIJHRTZLJDpHhURCJUbv7_L2SE",
+    "location": {
+      "lat": "33.4605161",
+      "lng": "35.5356288"
+    }
+  },
+  {
+    "name": {
+      "en": "Baisour",
+      "ar": "بيصور"
+    },
+    "district": "Jezzine",
+    "area": "South Lebanon",
+    "place_id": "ChIJ7eSmQggiHxUR_FVahYfwAk4",
+    "location": {
+      "lat": "33.7635237",
+      "lng": "35.5677813"
+    }
+  },
+  {
+    "name": {
+      "en": "Kfar Houneh",
+      "ar": "كفرحونة"
+    },
+    "district": "Jezzine",
+    "area": "South Lebanon",
+    "place_id": "ChIJaUvhN8DCHhURfB82Tpe5Vpo",
+    "location": {
+      "lat": "33.4923967",
+      "lng": "35.5897893"
+    }
+  },
+  {
+    "name": {
+      "en": "Lebaa",
+      "ar": "لبعه"
+    },
+    "district": "Jezzine",
+    "area": "South Lebanon",
+    "place_id": "ChIJ3fXJ-2bvHhURFnQ5YqtfVw0",
+    "location": {
+      "lat": "33.5487446",
+      "lng": "35.4530479"
+    }
+  },
+  {
+    "name": {
+      "en": "Kfar Houneh",
+      "ar": "كفرحونا"
+    },
+    "district": "Jezzine",
+    "area": "South Lebanon",
+    "place_id": "ChIJaUvhN8DCHhURfB82Tpe5Vpo",
+    "location": {
+      "lat": "33.4923967",
+      "lng": "35.5897893"
+    }
+  },
+  {
+    "name": {
+      "en": "Lebaa",
+      "ar": "لبعا"
+    },
+    "district": "Jezzine",
+    "area": "South Lebanon",
+    "place_id": "ChIJ3fXJ-2bvHhURFnQ5YqtfVw0",
+    "location": {
+      "lat": "33.5487446",
+      "lng": "35.4530479"
+    }
+  },
+  {
+    "name": {
+      "en": "Kharayeb",
+      "ar": "الخرايب"
+    },
+    "district": "Saida",
+    "area": "South Lebanon",
+    "place_id": "ChIJLQfeCEiJHhURipjuAKboWfY",
+    "location": {
+      "lat": "33.3433557",
+      "lng": "35.2994544"
+    }
+  },
+  {
+    "name": {
+      "en": "Tanbourit",
+      "ar": "طنبوريت"
+    },
+    "district": "Saida",
+    "area": "South Lebanon",
+    "place_id": "ChIJ81JUm0fuHhURluiv0vPJo6Q",
+    "location": {
+      "lat": "33.5176943",
+      "lng": "35.4131337"
+    }
+  },
+  {
+    "name": {
+      "en": "Aadloun",
+      "ar": "عدلون"
+    },
+    "district": "Saida",
+    "area": "South Lebanon",
+    "place_id": "ChIJO34L2buLHhURoDXwma-D5Zc",
+    "location": {
+      "lat": "33.4038299",
+      "lng": "35.2734051"
+    }
+  },
+  {
+    "name": {
+      "en": "Tanbourit",
+      "ar": "طنبوريت"
+    },
+    "district": "Saida",
+    "area": "South Lebanon",
+    "place_id": "ChIJ81JUm0fuHhURluiv0vPJo6Q",
+    "location": {
+      "lat": "33.5176943",
+      "lng": "35.4131337"
+    }
+  },
+  {
+    "name": {
+      "en": "Debl",
+      "ar": "دبل"
+    },
+    "district": "Bint Jbeil",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJ6eqw5JiCHhURXue6BFVGIk4",
+    "location": {
+      "lat": "33.1197637",
+      "lng": "35.3662267"
+    }
+  },
+  {
+    "name": {
+      "en": "Ain Ebel",
+      "ar": "عين ابل حي العين"
+    },
+    "district": "Bint Jbeil",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJUYU_VEWdHhURFFqk-xyOfeA",
+    "location": {
+      "lat": "33.111568",
+      "lng": "35.4017195"
+    }
+  },
+  {
+    "name": {
+      "en": "Debl",
+      "ar": "دبل"
+    },
+    "district": "Bint Jbeil",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJ6eqw5JiCHhURXue6BFVGIk4",
+    "location": {
+      "lat": "33.1197637",
+      "lng": "35.3662267"
+    }
+  },
+  {
+    "name": {
+      "en": "Ain Ebel",
+      "ar": "عين إبل"
+    },
+    "district": "Bint Jbeil",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJUYU_VEWdHhURFFqk-xyOfeA",
+    "location": {
+      "lat": "33.111568",
+      "lng": "35.4017195"
+    }
+  },
+  {
+    "name": {
+      "en": "Chouaiyya",
+      "ar": "شويا"
+    },
+    "district": "Hasbaya",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJbwO3Wg04HxURgO62FnEmKxc",
+    "location": {
+      "lat": "33.9269208",
+      "lng": "35.71960130000001"
+    }
+  },
+  {
+    "name": {
+      "en": "Kawkaba",
+      "ar": "كوكبا"
+    },
+    "district": "Hasbaya",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJL_URIkrBHhURdl2F8OH9RMU",
+    "location": {
+      "lat": "33.3925848",
+      "lng": "35.6459666"
+    }
+  },
+  {
+    "name": {
+      "en": "Bouaidah",
+      "ar": "البويضة"
+    },
+    "district": "Marjeyoun",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJTQs-COBEIhUR8nIcCShxkko",
+    "location": {
+      "lat": "34.4356422",
+      "lng": "36.4147244"
+    }
+  },
+  {
+    "name": {
+      "en": "Khiam",
+      "ar": "الخيام جنوبي"
+    },
+    "district": "Marjeyoun",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJB5p2yQq_HhUR8cmVmvvHKFY",
+    "location": {
+      "lat": "33.3294132",
+      "lng": "35.6148488"
+    }
+  },
+  {
+    "name": {
+      "en": "Khiam",
+      "ar": "الخيام شرقي"
+    },
+    "district": "Marjeyoun",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJB5p2yQq_HhUR8cmVmvvHKFY",
+    "location": {
+      "lat": "33.3294132",
+      "lng": "35.6148488"
+    }
+  },
+  {
+    "name": {
+      "en": "Khiam",
+      "ar": "الخيام شمالي"
+    },
+    "district": "Marjeyoun",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJB5p2yQq_HhUR8cmVmvvHKFY",
+    "location": {
+      "lat": "33.3294132",
+      "lng": "35.6148488"
+    }
+  },
+  {
+    "name": {
+      "en": "Khiam",
+      "ar": "الخيام غربي"
+    },
+    "district": "Marjeyoun",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJB5p2yQq_HhUR8cmVmvvHKFY",
+    "location": {
+      "lat": "33.3294132",
+      "lng": "35.6148488"
+    }
+  },
+  {
+    "name": {
+      "en": "Blat",
+      "ar": "بلاط"
+    },
+    "district": "Marjeyoun",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJ__tpbFJbHxURXB7YP7ff6qQ",
+    "location": {
+      "lat": "34.1138673",
+      "lng": "35.6632747"
+    }
+  },
+  {
+    "name": {
+      "en": "Kfarkela",
+      "ar": "كفركلا"
+    },
+    "district": "Marjeyoun",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJm_qDig-WHhURcrzg1R7SwLc",
+    "location": {
+      "lat": "33.2787481",
+      "lng": "35.554823"
+    }
+  },
+  {
+    "name": {
+      "en": "Meiss El Jabal",
+      "ar": "ميس الجبل جنوبي"
+    },
+    "district": "Marjeyoun",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJbcHEaB2ZHhURlrYOdz67aqY",
+    "location": {
+      "lat": "33.1691634",
+      "lng": "35.5211931"
+    }
+  },
+  {
+    "name": {
+      "en": "Meiss El Jabal",
+      "ar": "ميس الجبل شرقي"
+    },
+    "district": "Marjeyoun",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJbcHEaB2ZHhURlrYOdz67aqY",
+    "location": {
+      "lat": "33.1691634",
+      "lng": "35.5211931"
+    }
+  },
+  {
+    "name": {
+      "en": "Meiss El Jabal",
+      "ar": "ميس الجبل شمالي"
+    },
+    "district": "Marjeyoun",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJbcHEaB2ZHhURlrYOdz67aqY",
+    "location": {
+      "lat": "33.1691634",
+      "lng": "35.5211931"
+    }
+  },
+  {
+    "name": {
+      "en": "Meiss El Jabal",
+      "ar": "ميس الجبل غربي"
+    },
+    "district": "Marjeyoun",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJbcHEaB2ZHhURlrYOdz67aqY",
+    "location": {
+      "lat": "33.1691634",
+      "lng": "35.5211931"
+    }
+  },
+  {
+    "name": {
+      "en": "Kfarkela",
+      "ar": "كفركلا"
+    },
+    "district": "Marjeyoun",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJm_qDig-WHhURcrzg1R7SwLc",
+    "location": {
+      "lat": "33.2787481",
+      "lng": "35.554823"
+    }
+  },
+  {
+    "name": {
+      "en": "Jbaa",
+      "ar": "جباع"
+    },
+    "district": "Nabatiyeh",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJXWpHFwbpHhUR-mWiVKxd95g",
+    "location": {
+      "lat": "33.4862543",
+      "lng": "35.5176113"
+    }
+  },
+  {
+    "name": {
+      "en": "Zebdine",
+      "ar": "زبدين"
+    },
+    "district": "Nabatiyeh",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJEb78G2qTHhURLrIr40Nhidw",
+    "location": {
+      "lat": "33.3757342",
+      "lng": "35.4613782"
+    }
+  },
+  {
+    "name": {
+      "en": "Sarba",
+      "ar": "صربا"
+    },
+    "district": "Nabatiyeh",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJl3hbJ5BAHxURQuH_lXpVpio",
+    "location": {
+      "lat": "33.9773827",
+      "lng": "35.6183603"
+    }
+  },
+  {
+    "name": {
+      "en": "Yohmor",
+      "ar": "يحمر"
+    },
+    "district": "Nabatiyeh",
+    "area": "Nabatiyeh",
+    "place_id": "ChIJ4d99cEvbHhURwBvBiVJ7FSI",
+    "location": {
+      "lat": "33.4861543",
+      "lng": "35.67038489999999"
+    }
+  },
+  {
+    "name": {
+      "en": "Joub Jannine",
+      "ar": "جب جنين"
+    },
+    "district": "Bekaa West",
+    "area": "Bekaa",
+    "place_id": "ChIJPQ7lgVIoHxURyMDZ8OJzgnI",
+    "location": {
+      "lat": "33.6328198",
+      "lng": "35.7819158"
+    }
+  },
+  {
+    "name": {
+      "en": "Ain Zebdeh",
+      "ar": "عين زبده"
+    },
+    "district": "Bekaa West",
+    "area": "Bekaa",
+    "place_id": "ChIJT1gHQH7YHhURfMlO4ydOl4w",
+    "location": {
+      "lat": "33.6223718",
+      "lng": "35.7030023"
+    }
+  },
+  {
+    "name": {
+      "en": "Lala",
+      "ar": "لالا"
+    },
+    "district": "Bekaa West",
+    "area": "Bekaa",
+    "place_id": "ChIJoaxgIOjXHhUROL5QePSBfk4",
+    "location": {
+      "lat": "33.598873",
+      "lng": "35.7624401"
+    }
+  },
+  {
+    "name": {
+      "en": "Yohmor",
+      "ar": "يحمر"
+    },
+    "district": "Bekaa West",
+    "area": "Bekaa",
+    "place_id": "ChIJ4d99cEvbHhURwBvBiVJ7FSI",
+    "location": {
+      "lat": "33.4861543",
+      "lng": "35.67038489999999"
+    }
+  },
+  {
+    "name": {
+      "en": "Ain Zebdeh",
+      "ar": "عين زبده"
+    },
+    "district": "Bekaa West",
+    "area": "Bekaa",
+    "place_id": "ChIJT1gHQH7YHhURfMlO4ydOl4w",
+    "location": {
+      "lat": "33.6223718",
+      "lng": "35.7030023"
+    }
+  },
+  {
+    "name": {
+      "en": "Joub Jannine",
+      "ar": "جب جنّين"
+    },
+    "district": "Bekaa West",
+    "area": "Bekaa",
+    "place_id": "ChIJPQ7lgVIoHxURyMDZ8OJzgnI",
+    "location": {
+      "lat": "33.6328198",
+      "lng": "35.7819158"
+    }
+  },
+  {
+    "name": {
+      "en": "Lala",
+      "ar": "لالا"
+    },
+    "district": "Bekaa West",
+    "area": "Bekaa",
+    "place_id": "ChIJoaxgIOjXHhUROL5QePSBfk4",
+    "location": {
+      "lat": "33.598873",
+      "lng": "35.7624401"
+    }
+  },
+  {
+    "name": {
+      "en": "Mhaydthe",
+      "ar": "المحيدثة"
+    },
+    "district": "Rachaya",
+    "area": "Bekaa",
+    "place_id": "ChIJJ-xnKGLWHhUR2rYOv3Xlq14",
+    "location": {
+      "lat": "33.5564654",
+      "lng": "35.8117649"
+    }
+  },
+  {
+    "name": {
+      "en": "Bakkifa",
+      "ar": "بكيفا"
+    },
+    "district": "Rachaya",
+    "area": "Bekaa",
+    "place_id": "ChIJZQIfgWfRHhURFhIl8PUSKfA",
+    "location": {
+      "lat": "33.4932276",
+      "lng": "35.8195696"
+    }
+  },
+  {
+    "name": {
+      "en": "Aaita El Foukhar",
+      "ar": "عيتا الفخار"
+    },
+    "district": "Rachaya",
+    "area": "Bekaa",
+    "place_id": "ChIJW28V5VcrHxURVKNpoXp19CY",
+    "location": {
+      "lat": "33.6399798",
+      "lng": "35.9050801"
+    }
+  },
+  {
+    "name": {
+      "en": "Kfar Mechki",
+      "ar": "كفرمشكي"
+    },
+    "district": "Rachaya",
+    "area": "Bekaa",
+    "place_id": "ChIJO2YbxMbQHhURZkZGq_qa42Y",
+    "location": {
+      "lat": "33.5168415",
+      "lng": "35.7662528"
+    }
+  },
+  {
+    "name": {
+      "en": "Kawkaba",
+      "ar": "كوكبا"
+    },
+    "district": "Rachaya",
+    "area": "Bekaa",
+    "place_id": "ChIJL_URIkrBHhURdl2F8OH9RMU",
+    "location": {
+      "lat": "33.3925848",
+      "lng": "35.6459666"
+    }
+  },
+  {
+    "name": {
+      "en": "Aaita El Foukhar",
+      "ar": "عيتا الفخار"
+    },
+    "district": "Rachaya",
+    "area": "Bekaa",
+    "place_id": "ChIJW28V5VcrHxURVKNpoXp19CY",
+    "location": {
+      "lat": "33.6399798",
+      "lng": "35.9050801"
+    }
+  },
+  {
+    "name": {
+      "en": "Bakkifa",
+      "ar": "بكيفا"
+    },
+    "district": "Rachaya",
+    "area": "Bekaa",
+    "place_id": "ChIJZQIfgWfRHhURFhIl8PUSKfA",
+    "location": {
+      "lat": "33.4932276",
+      "lng": "35.8195696"
+    }
+  },
+  {
+    "name": {
+      "en": "Kfar Mechki",
+      "ar": "كفرمشكي"
+    },
+    "district": "Rachaya",
+    "area": "Bekaa",
+    "place_id": "ChIJO2YbxMbQHhURZkZGq_qa42Y",
+    "location": {
+      "lat": "33.5168415",
+      "lng": "35.7662528"
+    }
+  },
+  {
+    "name": {
+      "en": "Mrayjat",
+      "ar": "المريجات"
+    },
+    "district": "Zahleh",
+    "area": "Bekaa",
+    "place_id": "ChIJ8UMMj2skHxURqq-Ig73qdXc",
+    "location": {
+      "lat": "33.7413031",
+      "lng": "35.6701646"
+    }
+  },
+  {
+    "name": {
+      "en": "Niha",
+      "ar": "نيحا"
+    },
+    "district": "Zahleh",
+    "area": "Bekaa",
+    "place_id": "ChIJO-ulEZPeHhURXr_o9FWhE8U",
+    "location": {
+      "lat": "33.5954973",
+      "lng": "35.6241194"
+    }
+  },
+  {
+    "name": {
+      "en": "Bouaidah",
+      "ar": "البويضة"
+    },
+    "district": "Hermel",
+    "area": "Bekaa",
+    "place_id": "ChIJTQs-COBEIhUR8nIcCShxkko",
+    "location": {
+      "lat": "34.4356422",
+      "lng": "36.4147244"
+    }
+  },
+  {
+    "name": {
+      "en": "Houmayri",
+      "ar": "الحميري"
+    },
+    "district": "Hermel",
+    "area": "Bekaa",
+    "place_id": "ChIJfxO1HKKPHhUR7g7l8FzfnWQ",
+    "location": {
+      "lat": "33.2950779",
+      "lng": "35.3523746"
+    }
+  },
+  {
+    "name": {
+      "en": "Kharayeb",
+      "ar": "الخرايب"
+    },
+    "district": "Hermel",
+    "area": "Bekaa",
+    "place_id": "ChIJLQfeCEiJHhURipjuAKboWfY",
+    "location": {
+      "lat": "33.3433557",
+      "lng": "35.2994544"
+    }
+  },
+  {
+    "name": {
+      "en": "Almoaisera",
+      "ar": "المعيصرة"
+    },
+    "district": "Hermel",
+    "area": "Bekaa",
+    "place_id": "ChIJg44AbyHAIxURTADv6keshLY",
+    "location": {
+      "lat": "34.99166810000001",
+      "lng": "36.2366411"
+    }
+  },
+  {
+    "name": {
+      "en": "Mrayjat",
+      "ar": "المريجات"
+    },
+    "district": "Aley",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ8UMMj2skHxURqq-Ig73qdXc",
+    "location": {
+      "lat": "33.7413031",
+      "lng": "35.6701646"
+    }
+  },
+  {
+    "name": {
+      "en": "Bhamdoun",
+      "ar": "بحمدون"
+    },
+    "district": "Aley",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJPc-IvlA7HxURgBIygAtaCFg",
+    "location": {
+      "lat": "33.8088596",
+      "lng": "35.6599267"
+    }
+  },
+  {
+    "name": {
+      "en": "Bdadoun",
+      "ar": "بدادون"
+    },
+    "district": "Aley",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ3aJpbnQYHxUR6S1FloiY_o4",
+    "location": {
+      "lat": "33.8114575",
+      "lng": "35.5683403"
+    }
+  },
+  {
+    "name": {
+      "en": "Bchamoun",
+      "ar": "بشامون"
+    },
+    "district": "Aley",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJnRElGt0YHxURCI1JA-44wd4",
+    "location": {
+      "lat": "33.7821927",
+      "lng": "35.5312037"
+    }
+  },
+  {
+    "name": {
+      "en": "Baisour",
+      "ar": "بيصور"
+    },
+    "district": "Aley",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ7eSmQggiHxUR_FVahYfwAk4",
+    "location": {
+      "lat": "33.7635237",
+      "lng": "35.5677813"
+    }
+  },
+  {
+    "name": {
+      "en": "Jisr El Qadi",
+      "ar": "جسر القاضي"
+    },
+    "district": "Aley",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJGztlkWIfHxURVouQjW4f9U0",
+    "location": {
+      "lat": "33.7258689",
+      "lng": "35.5647954"
+    }
+  },
+  {
+    "name": {
+      "en": "Ain El Remmaneh",
+      "ar": "عين الرمانة"
+    },
+    "district": "Aley",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJnYO5nOoiHxUR9p0DX7pBknw",
+    "location": {
+      "lat": "33.8045554",
+      "lng": "35.588779"
+    }
+  },
+  {
+    "name": {
+      "en": "Majdalaiya",
+      "ar": "مجدليا"
+    },
+    "district": "Aley",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJqTWYhYn2IRURloWTfemJJZ8",
+    "location": {
+      "lat": "34.4149859",
+      "lng": "35.8694944"
+    }
+  },
+  {
+    "name": {
+      "en": "Bhamdoun",
+      "ar": "محطة بحمدون"
+    },
+    "district": "Aley",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJPc-IvlA7HxURgBIygAtaCFg",
+    "location": {
+      "lat": "33.8088596",
+      "lng": "35.6599267"
+    }
+  },
+  {
+    "name": {
+      "en": "Bdadoun",
+      "ar": "بدادون"
+    },
+    "district": "Aley",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ3aJpbnQYHxUR6S1FloiY_o4",
+    "location": {
+      "lat": "33.8114575",
+      "lng": "35.5683403"
+    }
+  },
+  {
+    "name": {
+      "en": "Bchamoun",
+      "ar": "بشامون"
+    },
+    "district": "Aley",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJnRElGt0YHxURCI1JA-44wd4",
+    "location": {
+      "lat": "33.7821927",
+      "lng": "35.5312037"
+    }
+  },
+  {
+    "name": {
+      "en": "Baisour",
+      "ar": "بيصور"
+    },
+    "district": "Aley",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ7eSmQggiHxUR_FVahYfwAk4",
+    "location": {
+      "lat": "33.7635237",
+      "lng": "35.5677813"
+    }
+  },
+  {
+    "name": {
+      "en": "Jisr El Qadi",
+      "ar": "جسر القاضي"
+    },
+    "district": "Aley",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJGztlkWIfHxURVouQjW4f9U0",
+    "location": {
+      "lat": "33.7258689",
+      "lng": "35.5647954"
+    }
+  },
+  {
+    "name": {
+      "en": "Arsoun",
+      "ar": "ارصون"
+    },
+    "district": "Baabda",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJMb3XmtI7HxUReKXywwhZg0I",
+    "location": {
+      "lat": "33.8603792",
+      "lng": "35.6905583"
+    }
+  },
+  {
+    "name": {
+      "en": "Kahlouniyeh",
+      "ar": "الكحلونية"
+    },
+    "district": "Baabda",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJi7d8aZXfHhURAK7H7NX7C2I",
+    "location": {
+      "lat": "33.6491239",
+      "lng": "35.5901363"
+    }
+  },
+  {
+    "name": {
+      "en": "Louaizeh",
+      "ar": "اللويزه"
+    },
+    "district": "Baabda",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJHRTZLJDpHhURCJUbv7_L2SE",
+    "location": {
+      "lat": "33.4605161",
+      "lng": "35.5356288"
+    }
+  },
+  {
+    "name": {
+      "en": "Hammana",
+      "ar": "حمانا"
+    },
+    "district": "Baabda",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJV7W9kXA6HxUR8NNbu0lyUJ4",
+    "location": {
+      "lat": "33.8252494",
+      "lng": "35.7332926"
+    }
+  },
+  {
+    "name": {
+      "en": "Deir El Harf",
+      "ar": "دير الحرف"
+    },
+    "district": "Baabda",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJd2nu0rc7HxURksMrJ3IlPK4",
+    "location": {
+      "lat": "33.8484856",
+      "lng": "35.6886828"
+    }
+  },
+  {
+    "name": {
+      "en": "Ain El Remmaneh",
+      "ar": "عين الرمانة"
+    },
+    "district": "Baabda",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJnYO5nOoiHxUR9p0DX7pBknw",
+    "location": {
+      "lat": "33.8045554",
+      "lng": "35.588779"
+    }
+  },
+  {
+    "name": {
+      "en": "Deir El Harf",
+      "ar": "دير الحرف"
+    },
+    "district": "Baabda",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJd2nu0rc7HxURksMrJ3IlPK4",
+    "location": {
+      "lat": "33.8484856",
+      "lng": "35.6886828"
+    }
+  },
+  {
+    "name": {
+      "en": "Hammana",
+      "ar": "حمانا"
+    },
+    "district": "Baabda",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJV7W9kXA6HxUR8NNbu0lyUJ4",
+    "location": {
+      "lat": "33.8252494",
+      "lng": "35.7332926"
+    }
+  },
+  {
+    "name": {
+      "en": "Arsoun",
+      "ar": "أرصون"
+    },
+    "district": "Baabda",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJMb3XmtI7HxUReKXywwhZg0I",
+    "location": {
+      "lat": "33.8603792",
+      "lng": "35.6905583"
+    }
+  },
+  {
+    "name": {
+      "en": "Aammatour",
+      "ar": "عمّاطور"
+    },
+    "district": "Chouf",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ46mmzp_fHhUReMZTOdSbF_8",
+    "location": {
+      "lat": "33.6435278",
+      "lng": "35.60858440000001"
+    }
+  },
+  {
+    "name": {
+      "en": "Niha",
+      "ar": "نيحا (الشوف)"
+    },
+    "district": "Chouf",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJO-ulEZPeHhURXr_o9FWhE8U",
+    "location": {
+      "lat": "33.5954973",
+      "lng": "35.6241194"
+    }
+  },
+  {
+    "name": {
+      "en": "Kahlouniyeh",
+      "ar": "الكحلونيه"
+    },
+    "district": "Chouf",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJi7d8aZXfHhURAK7H7NX7C2I",
+    "location": {
+      "lat": "33.6491239",
+      "lng": "35.5901363"
+    }
+  },
+  {
+    "name": {
+      "en": "Bakkifa",
+      "ar": "بكيفا"
+    },
+    "district": "Chouf",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJZQIfgWfRHhURFhIl8PUSKfA",
+    "location": {
+      "lat": "33.4932276",
+      "lng": "35.8195696"
+    }
+  },
+  {
+    "name": {
+      "en": "Jbaa",
+      "ar": "جباع"
+    },
+    "district": "Chouf",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJXWpHFwbpHhUR-mWiVKxd95g",
+    "location": {
+      "lat": "33.4862543",
+      "lng": "35.5176113"
+    }
+  },
+  {
+    "name": {
+      "en": "Darayya",
+      "ar": "داريا"
+    },
+    "district": "Chouf",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJPywFG_ffGBURwXAD55ZTaps",
+    "location": {
+      "lat": "33.456443",
+      "lng": "36.2359629"
+    }
+  },
+  {
+    "name": {
+      "en": "Aammatour",
+      "ar": "عماطور"
+    },
+    "district": "Chouf",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ46mmzp_fHhUReMZTOdSbF_8",
+    "location": {
+      "lat": "33.6435278",
+      "lng": "35.60858440000001"
+    }
+  },
+  {
+    "name": {
+      "en": "Aaqoura",
+      "ar": "العاقورة"
+    },
+    "district": "Jbeil",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJE9oiBrpUHxURHK_A8TpFQD8",
+    "location": {
+      "lat": "34.1214952",
+      "lng": "35.9040648"
+    }
+  },
+  {
+    "name": {
+      "en": "Laqlouq",
+      "ar": "اللقلوق"
+    },
+    "district": "Jbeil",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJbYLqrGVUHxUR6vheC4-IU5g",
+    "location": {
+      "lat": "34.1339253",
+      "lng": "35.8612812"
+    }
+  },
+  {
+    "name": {
+      "en": "Blat",
+      "ar": "بلاط"
+    },
+    "district": "Jbeil",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ__tpbFJbHxURXB7YP7ff6qQ",
+    "location": {
+      "lat": "34.1138673",
+      "lng": "35.6632747"
+    }
+  },
+  {
+    "name": {
+      "en": "Zebdine",
+      "ar": "زبدين"
+    },
+    "district": "Jbeil",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJEb78G2qTHhURLrIr40Nhidw",
+    "location": {
+      "lat": "33.3757342",
+      "lng": "35.4613782"
+    }
+  },
+  {
+    "name": {
+      "en": "Ain El Delbeh",
+      "ar": "عين الدلبه"
+    },
+    "district": "Jbeil",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ-QHj5aBPHxURZEjOaOr5vXo",
+    "location": {
+      "lat": "34.0285329",
+      "lng": "35.7670537"
+    }
+  },
+  {
+    "name": {
+      "en": "Fghal",
+      "ar": "فغال"
+    },
+    "district": "Jbeil",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJW0CVdxZZHxURmqhdnOdIF3o",
+    "location": {
+      "lat": "34.2078799",
+      "lng": "35.6771131"
+    }
+  },
+  {
+    "name": {
+      "en": "Mechmech",
+      "ar": "مشمش"
+    },
+    "district": "Jbeil",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ_XjZUAM8IhURejIhenoRSts",
+    "location": {
+      "lat": "34.4720432",
+      "lng": "36.1712248"
+    }
+  },
+  {
+    "name": {
+      "en": "Maifouq",
+      "ar": "ميفوق"
+    },
+    "district": "Jbeil",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJC2p3DgRXHxURGoGVH_jeLSk",
+    "location": {
+      "lat": "34.1827615",
+      "lng": "35.7783385"
+    }
+  },
+  {
+    "name": {
+      "en": "Yanouh",
+      "ar": "يانوح"
+    },
+    "district": "Jbeil",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ5yeHbG5THxUR-LqUfR2BGcI",
+    "location": {
+      "lat": "34.1005841",
+      "lng": "35.8840367"
+    }
+  },
+  {
+    "name": {
+      "en": "Laqlouq",
+      "ar": "لقلوق"
+    },
+    "district": "Jbeil",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJbYLqrGVUHxUR6vheC4-IU5g",
+    "location": {
+      "lat": "34.1339253",
+      "lng": "35.8612812"
+    }
+  },
+  {
+    "name": {
+      "en": "Yanouh",
+      "ar": "يانوح"
+    },
+    "district": "Jbeil",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ5yeHbG5THxUR-LqUfR2BGcI",
+    "location": {
+      "lat": "34.1005841",
+      "lng": "35.8840367"
+    }
+  },
+  {
+    "name": {
+      "en": "Maifouq",
+      "ar": "ميفوق"
+    },
+    "district": "Jbeil",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJC2p3DgRXHxURGoGVH_jeLSk",
+    "location": {
+      "lat": "34.1827615",
+      "lng": "35.7783385"
+    }
+  },
+  {
+    "name": {
+      "en": "Fghal",
+      "ar": "فغال"
+    },
+    "district": "Jbeil",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJW0CVdxZZHxURmqhdnOdIF3o",
+    "location": {
+      "lat": "34.2078799",
+      "lng": "35.6771131"
+    }
+  },
+  {
+    "name": {
+      "en": "Mechmech",
+      "ar": "مشمش"
+    },
+    "district": "Jbeil",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ_XjZUAM8IhURejIhenoRSts",
+    "location": {
+      "lat": "34.4720432",
+      "lng": "36.1712248"
+    }
+  },
+  {
+    "name": {
+      "en": "Aaqoura",
+      "ar": "العاقورة"
+    },
+    "district": "Jbeil",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJE9oiBrpUHxURHK_A8TpFQD8",
+    "location": {
+      "lat": "34.1214952",
+      "lng": "35.9040648"
+    }
+  },
+  {
+    "name": {
+      "en": "Almoaisera",
+      "ar": "المعيصره"
+    },
+    "district": "Kesrwan",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJg44AbyHAIxURTADv6keshLY",
+    "location": {
+      "lat": "34.99166810000001",
+      "lng": "36.2366411"
+    }
+  },
+  {
+    "name": {
+      "en": "Beqaatet Kanaan",
+      "ar": "بقعاتة كنعان"
+    },
+    "district": "Kesrwan",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ9QC37e1IHxURaryYkDz-AgA",
+    "location": {
+      "lat": "33.965885",
+      "lng": "35.7647562"
+    }
+  },
+  {
+    "name": {
+      "en": "Darayya",
+      "ar": "داريا"
+    },
+    "district": "Kesrwan",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJPywFG_ffGBURwXAD55ZTaps",
+    "location": {
+      "lat": "33.456443",
+      "lng": "36.2359629"
+    }
+  },
+  {
+    "name": {
+      "en": "Delbta",
+      "ar": "دلبتا"
+    },
+    "district": "Kesrwan",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJtfALTIxGHxURJIoyIdqe1zY",
+    "location": {
+      "lat": "34.0079372",
+      "lng": "35.6890784"
+    }
+  },
+  {
+    "name": {
+      "en": "Sarba",
+      "ar": "صربا"
+    },
+    "district": "Kesrwan",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJl3hbJ5BAHxURQuH_lXpVpio",
+    "location": {
+      "lat": "33.9773827",
+      "lng": "35.6183603"
+    }
+  },
+  {
+    "name": {
+      "en": "Ain El Delbeh",
+      "ar": "عين الدلبه"
+    },
+    "district": "Kesrwan",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ-QHj5aBPHxURZEjOaOr5vXo",
+    "location": {
+      "lat": "34.0285329",
+      "lng": "35.7670537"
+    }
+  },
+  {
+    "name": {
+      "en": "Aintoura",
+      "ar": "عينطوره"
+    },
+    "district": "Kesrwan",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJHW26M1o_HxUR-rmZ3wFpPgc",
+    "location": {
+      "lat": "33.9579891",
+      "lng": "35.6355268"
+    }
+  },
+  {
+    "name": {
+      "en": "Ghosta",
+      "ar": "غوسطا"
+    },
+    "district": "Kesrwan",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJlYmHDB9HHxURoKB8lx86v1U",
+    "location": {
+      "lat": "33.9918137",
+      "lng": "35.6727488"
+    }
+  },
+  {
+    "name": {
+      "en": "Yahchouch",
+      "ar": "يحشوش"
+    },
+    "district": "Kesrwan",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ9WYgHl5FHxUR5MRGT2rOIIQ",
+    "location": {
+      "lat": "34.0666276",
+      "lng": "35.7363461"
+    }
+  },
+  {
+    "name": {
+      "en": "Beqaatet Kanaan",
+      "ar": "بقعاتة كنعان"
+    },
+    "district": "Kesrwan",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ9QC37e1IHxURaryYkDz-AgA",
+    "location": {
+      "lat": "33.965885",
+      "lng": "35.7647562"
+    }
+  },
+  {
+    "name": {
+      "en": "Ghosta",
+      "ar": "غوسطا"
+    },
+    "district": "Kesrwan",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJlYmHDB9HHxURoKB8lx86v1U",
+    "location": {
+      "lat": "33.9918137",
+      "lng": "35.6727488"
+    }
+  },
+  {
+    "name": {
+      "en": "Yahchouch",
+      "ar": "يحشوش"
+    },
+    "district": "Kesrwan",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJ9WYgHl5FHxUR5MRGT2rOIIQ",
+    "location": {
+      "lat": "34.0666276",
+      "lng": "35.7363461"
+    }
+  },
+  {
+    "name": {
+      "en": "Delbta",
+      "ar": "دلبتا"
+    },
+    "district": "Kesrwan",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJtfALTIxGHxURJIoyIdqe1zY",
+    "location": {
+      "lat": "34.0079372",
+      "lng": "35.6890784"
+    }
+  },
+  {
+    "name": {
+      "en": "Baskinta",
+      "ar": "بسكنتا"
+    },
+    "district": "Metn",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJtdH7cq1JHxURptRzlhOUEr4",
+    "location": {
+      "lat": "33.9440185",
+      "lng": "35.7865408"
+    }
+  },
+  {
+    "name": {
+      "en": "Mhaydthe",
+      "ar": "المحيدثة"
+    },
+    "district": "Metn",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJJ-xnKGLWHhUR2rYOv3Xlq14",
+    "location": {
+      "lat": "33.5564654",
+      "lng": "35.8117649"
+    }
+  },
+  {
+    "name": {
+      "en": "Baskinta",
+      "ar": "بسكنتا جنوبي"
+    },
+    "district": "Metn",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJtdH7cq1JHxURptRzlhOUEr4",
+    "location": {
+      "lat": "33.9440185",
+      "lng": "35.7865408"
+    }
+  },
+  {
+    "name": {
+      "en": "Baskinta",
+      "ar": "بسكنتا شمالي"
+    },
+    "district": "Metn",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJtdH7cq1JHxURptRzlhOUEr4",
+    "location": {
+      "lat": "33.9440185",
+      "lng": "35.7865408"
+    }
+  },
+  {
+    "name": {
+      "en": "Chouaiyya",
+      "ar": "شويا"
+    },
+    "district": "Metn",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJbwO3Wg04HxURgO62FnEmKxc",
+    "location": {
+      "lat": "33.9269208",
+      "lng": "35.71960130000001"
+    }
+  },
+  {
+    "name": {
+      "en": "Aintoura",
+      "ar": "عينطورة"
+    },
+    "district": "Metn",
+    "area": "Mount Lebanon",
+    "place_id": "ChIJHW26M1o_HxUR-rmZ3wFpPgc",
+    "location": {
+      "lat": "33.9579891",
+      "lng": "35.6355268"
+    }
+  },
+  {
+    "name": {
+      "en": "Hardine",
+      "ar": "حردين"
+    },
+    "district": "Batroun",
+    "area": "North Lebanon",
+    "place_id": "ChIJK7gOoFn-IRUR-kcYsL0TjVY",
+    "location": {
+      "lat": "34.2357565",
+      "lng": "35.8580097"
+    }
+  },
+  {
+    "name": {
+      "en": "Niha",
+      "ar": "نيحا"
+    },
+    "district": "Batroun",
+    "area": "North Lebanon",
+    "place_id": "ChIJO-ulEZPeHhURXr_o9FWhE8U",
+    "location": {
+      "lat": "33.5954973",
+      "lng": "35.6241194"
+    }
+  },
+  {
+    "name": {
+      "en": "Hardine",
+      "ar": "حردين"
+    },
+    "district": "Batroun",
+    "area": "North Lebanon",
+    "place_id": "ChIJK7gOoFn-IRUR-kcYsL0TjVY",
+    "location": {
+      "lat": "34.2357565",
+      "lng": "35.8580097"
+    }
+  },
+  {
+    "name": {
+      "en": "Batroun",
+      "ar": "كفيفان(البترون)"
+    },
+    "district": "Batroun",
+    "area": "North Lebanon",
+    "place_id": "ChIJbw0w3nJVHxUR4wX_1Id_cvc",
+    "location": {
+      "lat": "34.249832",
+      "lng": "35.6642904"
+    }
+  },
+  {
+    "name": {
+      "en": "Batroun",
+      "ar": "صغار(البترون)"
+    },
+    "district": "Batroun",
+    "area": "North Lebanon",
+    "place_id": "ChIJbw0w3nJVHxUR4wX_1Id_cvc",
+    "location": {
+      "lat": "34.249832",
+      "lng": "35.6642904"
+    }
+  },
+  {
+    "name": {
+      "en": "Majdalaiya",
+      "ar": "مجدليّا (زغرتا)"
+    },
+    "district": "Zgharta",
+    "area": "North Lebanon",
+    "place_id": "ChIJqTWYhYn2IRURloWTfemJJZ8",
+    "location": {
+      "lat": "34.4149859",
+      "lng": "35.8694944"
+    }
+  }
+]

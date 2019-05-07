@@ -1,0 +1,42 @@
+
+// Table
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+table{
+	width: 100%;
+}
+
+th,
+td{
+	border-bottom: 1px solid #e1e1e1;
+	padding: 10px 15px;
+	text-align: center;
+	font-size: 13px;
+
+	&.id{
+		font-weight: 700;
+		a{
+			font-weight: 700;
+		}
+	}
+
+	&.more{
+		padding: 10px 0;
+	}
+
+	a{
+		color: $gray;
+	}
+}
+
+th{
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+tr{
+	&:nth-of-type(even){
+		background-color: #f9f9f9;
+	}
+}

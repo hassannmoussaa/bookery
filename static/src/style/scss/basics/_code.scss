@@ -1,0 +1,29 @@
+
+// Code
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+code{
+	background: #f4f5f6;
+	@include border-radius(.4rem);
+	font-size: 86%;
+	margin: 0 .2rem;
+	padding: .2rem .5rem;
+	white-space: nowrap;
+}
+pre{
+	background: #f4f5f6;
+	@if $direction == rtl{
+		border-right: .3rem solid $brand-primary;
+	}@else{
+		border-left: .3rem solid $brand-primary;
+	}
+	font-family: 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', 'Monaco', monospace;
+
+	& > code{
+		background: transparent;
+    	@include border-radius(0);
+		display: block;
+		padding: 1rem 1.5rem;
+		white-space: pre;
+    }
+}

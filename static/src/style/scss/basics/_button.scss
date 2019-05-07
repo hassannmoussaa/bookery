@@ -1,0 +1,141 @@
+// Button
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+    background-color: $button-primary-color;
+    @include border-radius(3px);
+    color: $button-text-color;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    white-space: nowrap;
+    border: none;
+    margin: 0;
+    line-height: 1.6;
+    &:hover,
+    &:focus {
+        background-color: lighten($button-primary-color, 6%);
+        outline: 0;
+    }
+    &.button-disabled,
+    &[disabled] {
+        cursor: default;
+        @include opacity(0.5);
+        &:hover,
+        &:focus {
+            background-color: $button-primary-color;
+        }
+    }
+    &.button-outline {
+        background-color: transparent;
+        color: $button-primary-color;
+        border: 1px solid $button-primary-color;
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            border-color: lighten($button-primary-color, 6%);
+            color: lighten($button-primary-color, 6%);
+        }
+        &.button-disabled,
+        &[disabled] {
+            @include opacity(0.5);
+            &:hover,
+            &:focus {
+                border-color: inherit;
+                color: $button-primary-color;
+            }
+        }
+    }
+    &.button-clear {
+        background-color: transparent;
+        border-color: transparent;
+        color: $button-primary-color;
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            border-color: transparent;
+            color: lighten($button-primary-color, 6%);
+        }
+        &.button-disabled,
+        &[disabled] {
+            @include opacity(0.5);
+            &:hover,
+            &:focus {
+                color: $button-primary-color;
+            }
+        }
+    }
+    &.button-block {
+        width: 100%;
+        display: block;
+    }
+    &.button-small {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    &.button-large {
+        font-size: 20px;
+        padding: 6px 15px;
+        font-weight: 700;
+    }
+    &.button-mini {
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 1px 5px;
+    }
+    &.button-secondary {
+        color: $gray;
+        background-color: #eee;
+        &:hover {
+            color: $gray;
+            background-color: darken(#eee, 5%);
+        }
+    }
+}
+
+.joined-buttons {
+    @include inline-block();
+    overflow: hidden;
+    @include border-radius(3px);
+    button,
+    .button {
+        @include inline-block;
+        margin: 0;
+        @include border-radius(0);
+        i {
+            @if $direction==ltr {
+                margin-right: 5px;
+            }
+            @else {
+                margin-left: 5px;
+            }
+        }
+        &.button-center {
+            border-width: 1px 0 1px 0;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        button,
+        .button {
+            i {
+                margin: 0;
+            }
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+a.button:hover {
+    color: white;
+    text-decoration: none;
+}

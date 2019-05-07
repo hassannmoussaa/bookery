@@ -1,0 +1,44 @@
+//CONFIGURATIONS
+// Color
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+//$brand-primary: #398564;
+$brand-primary: #c68140;
+$brand-secondary: #d9dbdb;
+//input
+$input-bg-color: #fff;
+$input-border-color: #ddd;
+$input-active-border-color: $brand-primary;
+//button
+$button-primary-color: $brand-primary;
+$button-text-color: white;
+//// Typography
+$default-font-size: 14px;
+$arabic-font: 'JF Flat Regular',
+'Helvetica',
+'Arial',
+sans-serif;
+$default-font: $arabic-font;
+@if $direction==ltr {
+    $default-font: 'Open Sans', sans-serif;
+}
+
+//// Body
+////
+//// Settings for the `<body>` element.
+$body-bg: #F5F5F5 !default;
+$body-text-color: $gray-dark !default;
+//// Links
+////
+//// Style anchor elements.
+$link-color: $brand-primary !default;
+$link-decoration: none !default;
+$link-hover-color: lighten($link-color, 6%) !default;
+$link-hover-decoration: underline !default;
+//gradient
+%horizontal-gradient {
+    @include background(linear-gradient(to right, $brand-secondary, darken($brand-secondary, 10%)));
+}
+
+%vertical-gradient {
+    @include background(linear-gradient(to bottom, $brand-secondary, darken($brand-secondary, 10%)));
+}

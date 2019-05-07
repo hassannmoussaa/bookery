@@ -1,0 +1,14 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+config.codekit
+.sass-cache
+
+static/tools/node_modules
+uploads/*
+static/dist/scripts/lib/*
+bookery
+bookery.exe
+*.gz
+
+!.gitkeep

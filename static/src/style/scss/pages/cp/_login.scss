@@ -1,0 +1,39 @@
+/* ========== CP LOGIN ========== */
+
+.login {
+    text-align: center;
+    width: 300px;
+    margin: 150px auto;
+    .logo {
+        width: 150px;
+        display: block;
+        margin: 0 auto 15px;
+    }
+}
+
+#login-form {
+    input {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    button {
+        margin-top: 5px;
+    }
+    label {
+        input {
+            @if $direction==ltr {
+                margin-right: 5px;
+            }
+            @else {
+                margin-left: 5px;
+            }
+        }
+        font-size: 12px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .login {
+        margin-top: 60px;
+    }
+}

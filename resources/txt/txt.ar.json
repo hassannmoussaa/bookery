@@ -1,0 +1,110 @@
+{
+    "fields_placeholders": {
+        "email": "البريد الالكتروني",
+        "password": "الباسورد",
+        "retype_password": "اعد كتابة الباسورد",
+        "title": "العنوان",
+        "keywords": "الكلمات المفتاحية",
+        "search": "ابحث",
+        "name": "الاسم",
+        "web_name": "اسم الموقع",
+        "about_the_web": "عن الموقع",
+        "change_password": "تغيير الباسورد",
+        "admin_permissions": "صلاحيات المدير",
+        "phone_number": "رقم الهاتف",
+        "facebook": "فيسبوك",
+        "twitter": "تويتر",
+        "share_on": "انشر على",
+        "short_link": "رابط مختصر",
+        "content": "المحتوى",
+        "more": "المزيد",
+        "send": "ارسال",
+        "url": "الرابط",
+        "remember_me": "تذكرني"
+    },
+    "titles": {
+        "page_not_found": "الصفحة غير موجودة",
+        "account_was_unlocked": "تم قفل حسابك",
+        "failed_to_unlock_the_account": "فشل فك القفل عن حسابك"
+    },
+    "th": {
+        "name": "اسم",
+        "action": "حدث",
+        "title": "عنوان",
+        "picture": "صورة"
+    },
+    "empty_content_phrases": {},
+    "fields_labels": {
+        "email": "البريد الالكتروني",
+        "password": "الباسورد",
+        "retype_password": "اعد كتابة الباسورد",
+        "title": "العنوان",
+        "keywords": "الكلمات المفتاحية",
+        "search": "ابحث",
+        "name": "الاسم",
+        "web_name": "اسم الموقع",
+        "about_the_web": "عن الموقع",
+        "change_password": "تغيير الباسورد",
+        "admin_permissions": "صلاحيات المدير",
+        "phone_number": "رقم الهاتف",
+        "facebook": "فيسبوك",
+        "twitter": "تويتر",
+        "share_on": "انشر على",
+        "short_link": "الرابط المختصر",
+        "content": "المحتوى",
+        "more": "المزيد",
+        "send": "ارسال",
+        "url": "الرابط",
+        "remember_me": "تذكرني"
+    },
+    "buttons": {
+        "login": "تسجيل الدخول",
+        "edit": "تعديل",
+        "delete": "حذف",
+        "add": "اضافة",
+        "cancel": "الغاء",
+        "next": "التالي",
+        "clear": "تفريغ",
+        "prev": "السابق",
+        "more": "المزيد",
+        "back": "رجوع",
+        "search": "ابحث",
+        "view": "فتح"
+    },
+    "metas": {
+        "title": "Starter Kit",
+        "description": "Starter Kit useful for building a web server with go",
+        "keywords": "starter,kit,web,go,golang"
+    },
+    "successful_messages": {
+        "login_successfully": "تم تسجيل الدخول بنجاح",
+        "logout_successfully": "تم تسجيل الخروج",
+        "new_admin_was_added": "تم اضافة مدير جديد",
+        "files_was_uploaded_successfully": "تم رفع الملفات بنجاح"
+    },
+    "failure_messages": {
+        "authentication_credentials_invalid": "البريد الالكتروني او الباسورد خطأ",
+        "user_authentication_credentials_invalid": "البريد الالكتروني او الباسورد خطأ",
+        "admin_cannot_be_added": "تعذر اضافة مدير جديد، حاول مجددا",
+        "account_is_locked": "لاسباب امنية تم قفل حسابك بشكل مؤقت، رجاءا تفقد بريدك الالكتروني"
+    },
+    "error_messages": {
+        "unauthorized": "ليس لديك الصلاحيات بالولوج الى هذه الصفحة",
+        "csrf_error": "حدث خطأ ما، رجاءاً حدث الصفحة و أعد المحاولة",
+        "server_error": "حدث خطأ ما، حاول مرة أخرى"
+    },
+    "validation_messages": {
+        "authentication_credentials_incomplete": "رجاءا ادخل البريد الالكتروني و الباسورد",
+        "user_authentication_credentials_incomplete": "رجاءا ادخل البريد الالكتروني و الباسورد",
+        "email_is_required": "البريد الالكتروني مطلوب",
+        "password_is_required": "الباسورد مطلوب",
+        "name_is_required": "الاسم مطلوب",
+        "invalid_email": "البريد الاكتروني غير صحيح",
+        "invalid_password_length": "الباسورد يجب ان يكون بين ٦ و ١٦ حرف/رقم",
+        "invalid_name_length": "الاسم يجب ان يكون بين ٣ و ٦٠ حرف",
+        "invalid_data": "المعلومات غير صحيحة",
+        "email_exist": "البريد الاكتروني موجود مسبقا",
+        "please_select_a_file": "رجاءا اختر الملف",
+        "invalid_file_type": "نوع الملف المرفوع غير صحيح"
+    }
+}

@@ -1,0 +1,1 @@
+require(["jquery","requestjs","alertjs"],function(e,t,n){var r=e("#login-form");r.length>0&&r.on("submit",function(e){e.preventDefault();var a=r.serializeArray(),s=(new t).init(_APIURL+"/admins/auth",a);s.onFailure(function(e){n.alert(e.status,e.message)}),s.onSuccess(function(e){document.location="/cp"}),s.post()});var a=e("#alert");a.length>0&&a.css({top:"15px"})});

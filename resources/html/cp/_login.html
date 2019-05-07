@@ -1,0 +1,12 @@
+<div class="login">
+    <img class="logo" src="{{GetStaticFileURLPath "/dist/img/logo.png"}}" />
+    <form id="login-form">
+        <input type="email" class="field-block" name="email" id="email" required placeholder="{{.TextualContent.OfFieldPlaceholder "email"}}" />
+        <input type="password" class="field-block" name="password" id="password" required placeholder="{{.TextualContent.OfFieldPlaceholder "password"}}" />
+        <label for="remember-me">
+            <input type="checkbox" id="remember-me" value="true" name="remember_me" />
+            {{.TextualContent.OfFieldPlaceholder "remember_me"}}
+        </label>
+        <button type="submit" class="button button-block" >{{.TextualContent.OfButton "login"}}</button>
+    </form>
+</div>

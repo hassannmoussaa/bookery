@@ -1,0 +1,14 @@
+@if $direction==rtl {
+    /* Regular */
+    @font-face {
+        font-family: "JF Flat Regular";
+        src: url('../../fonts/JF/JF-Flat-regular.eot');
+        src: url('../../fonts/JF/JF-Flat-regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/JF/JF-Flat-regular.svg#JF Flat Regular') format('svg'), url('../../fonts/JF/JF-Flat-regular.woff') format('woff'), url('../../fonts/JF/JF-Flat-regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@else {
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+}

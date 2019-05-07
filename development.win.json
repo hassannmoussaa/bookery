@@ -1,0 +1,67 @@
+{
+    "app_name": "bookery",
+    "app_version": "1.0.0",
+    "domain_name": "192.168.0.15",
+    "api_path": "/api",
+    "only_https": false,
+    "postgres_db_config": {
+        "host": "localhost",
+        "port": 5432,
+        "user": "postgres",
+        "password": "123456",
+        "database": "bookery"
+    },
+    "csrf_encryption_key": "PlSZ96C31PokUj74",
+    "cors_allowed_origins": [
+        "http://192.168.0.15",
+        "http://192.168.0.15:8080"
+    ],
+    "resources_dir_path": "resources",
+    "jwt_private_key_path": "keys\\jwt\\private_key.pem",
+    "jwt_public_key_path": "keys\\jwt\\public_key.pem",
+    "html_templates_path": "html",
+    "txt_dir_path": "txt",
+    "uploader": {
+        "path": "C:\\Users\\Master\\go\\src\\github.com\\hassannmoussaa\\bookery\\uploads",
+        "url_path": "http://192.168.0.15:8080/uploads",
+        "to_cloud": false
+    },
+    "static_files": {
+        "path": "C:\\Users\\Master\\go\\src\\github.com\\hassannmoussaa\\bookery\\static",
+        "url_path": "http://192.168.0.15:8080/static",
+        "from_cloud": false
+    },
+    "server_address": ":8080",
+    "web_host": "http://192.168.0.15:8080",
+    "api_host": "http://192.168.0.15:8080/api",
+    "default_meta_image_url": "http://192.168.0.15:8080/static/dist/img/meta-img.jpg",
+    "smtp_host": "smtp.gmail.com",
+    "smtp_port": 587,
+    "email": "nrtryy@gmail.com",
+    "email_password": "idforwnquwgyawpf",
+    "api_server_username": "bookery-API",
+    "api_server_password": "bR8layHxcnj7;wzC",
+    "fcm_server_key": "AAAADi5yB0I:APA91bHSdZJcsVtSHUas3PSX35KOMDEWX0kyaogvE8qbnQKsLSBcUiXntnW40m7yNnVqGZ5BDv2bsIGnDtTSiOnuTFahVavuPjQdwVKWSDG2TQKNZOmO6riY-J-WyJaU_wnwJBsiFHB1",
+    "images_sizes": {
+        "admin": {
+            "small": [
+                80,
+                80
+            ],
+            "medium": [
+                300,
+                300
+            ]
+        },
+        "file": {
+            "small": [
+                80,
+                80
+            ],
+            "medium": [
+                300,
+                300
+            ]
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{{template "_alert.html" }}
+{{template "_popup.html" }}
+{{template "_loader.html" }}
+{{template "_img-box.html" }}
+<script>var requirejs = { waitSeconds: 0 };</script>
+<script src="{{GetStaticFileURLPath "/dist/scripts/app.min.js" .AppVersion}}"></script>
+<!--<script data-main="{{GetStaticFileURLPath "/dist/scripts/main"}}" src="{{GetStaticFileURLPath "/dist/scripts/lib/requirejs/require.js"}}"></script>-->
+{{if eq .Global.Environment "production"}}
+{{end}}
+</body>
+
+</html>

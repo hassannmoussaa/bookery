@@ -1,0 +1,21 @@
+/* =========== UNLOCK ACCOUNT ======== */
+
+#unlock-account {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin: 120px auto 30px;
+    max-width: 500px;
+    padding: 5px 15px 15px;
+    text-align: center;
+    h4 {
+        text-transform: capitalize;
+        margin-top: 15px;
+    }
+    i {
+        display: block;
+        font-size: 80px;
+        color: $brand-success;
+        line-height: 1;
+        margin: 0 auto 10px;
+    }
+}

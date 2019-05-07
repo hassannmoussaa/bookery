@@ -1,0 +1,69 @@
+// Base
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// The base font-size is set at 62.5% for having the convenience
+// of sizing rems in a way that is similar to using px. 1.6rem=16px
+html {
+    @include box-sizing(border-box);
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $body-bg;
+    font-size: $default-font-size;
+    font-weight: 300;
+    letter-spacing: .01em;
+    line-height: 1.6;
+    font-family: $default-font;
+    color: $body-text-color;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    direction: $direction;
+}
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*:after,
+*:before {
+    @include box-sizing(border-box);
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+html.mce-fullscreen,
+div.mce-fullscreen {
+    .mce-tinymce,
+    &.mce-tinymce {
+        z-index: 123456 !important;
+    }
+    .mce-menu,
+    .mce-window {
+        z-index: 1234567 !important;
+    }
+}
+
+body>.mce-menu,
+body>.mce-window {
+    z-index: 1234567 !important;
+}
+
+.lowercase {
+    text-transform: lowercase !important;
+}

@@ -1,0 +1,107 @@
+/* ======== CP NAV ======== */
+
+#cp-nav {
+    display: block;
+    height: 121px;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 30px;
+    opacity: 0;
+    .menu {
+        background-color: white;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+        li {
+            margin: 0;
+            @include inline-block();
+        }
+        .menu-item {
+            float: left;
+            width: 140px;
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            @include transition(all 0.3s cubic-bezier(.25, .8, .25, 1));
+            .icon {
+                display: block;
+                margin: 0 auto 10px;
+                width: 45px;
+                overflow: hidden;
+                svg {
+                    width: 100% !important;
+                    display: block;
+                    path{
+                        fill: $gray !important;
+                    }
+                }
+            }
+            .title {
+                text-transform: capitalize;
+                font-size: 18px;
+                padding: 0;
+                margin: 0;
+                color: $gray-light;
+            }
+            &:hover {
+                text-decoration: none;
+                background-color: darken(#F5F5F5, 2%);
+            }
+            &.active {
+                background-color: $brand-primary;
+                .title {
+                    color: white;
+                }
+                .icon {
+                    svg path {
+                        fill: white !important;
+                    }
+                }
+            }
+        }
+        li {
+            &:last-of-type {
+                .menu-item {
+                    border: none;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(md) {
+        height: 91px;
+        .menu {
+            .menu-item {
+                width: 100px;
+                padding: 10px;
+                .icon {
+                    width: 30px;
+                    margin-bottom: 5px;
+                }
+                .title {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        height: 75px;
+        .menu {
+            .menu-item {
+                width: 80px;
+                padding: 5px;
+                .icon {
+                    width: 20px;
+                    margin-bottom: 2px;
+                }
+                .title {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="PostgreSQL" id="Project_11018e74" template="Default" database="PostgreSQL" >
+	<schema name="public" catalogname="bookery" schemaname="public" >
+		<table name="admin" >
+			<column name="id" type="serial" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="name" type="varchar" length="150" decimal="0" jt="12" >
+				<defo>NULL::character varying</defo>
+			</column>
+			<column name="email" type="varchar" length="240" decimal="0" jt="12" >
+				<defo>NULL::character varying</defo>
+			</column>
+			<column name="password" type="varchar" length="400" decimal="0" jt="12" >
+				<defo>NULL::character varying</defo>
+			</column>
+			<column name="hash" type="varchar" length="400" decimal="0" jt="12" >
+				<defo>NULL::character varying</defo>
+			</column>
+			<column name="locked_on" type="timestamp" jt="93" />
+			<index name="pk_admin" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+		</table>
+		<sequence name="sq_admin_id" start="1" />
+	</schema>
+	<connector name="PostgreSQL" database="PostgreSQL" driver_class="org.postgresql.Driver" driver_jar="postgresql-42.1.4.jar" driver_desc="Standard" host="localhost" port="5432" instance="bookery" user="postgres" passwd="MTIzNDU2" />
+	<layout name="Default" id="Layout_38b2e5f4" show_relation="columns" >
+		<entity schema="public" name="admin" color="bfd4f5" x="45" y="45" />
+		<browser id="Browse_17eb58c6" name="admin" confirm_updates="y" confirmed="y" >
+			<browse_table schema="public" entity="admin" x="-2147483648" y="-2147483648" width="-2147483648" height="-2147483648" />
+		</browser>
+	</layout>
+</project>

@@ -1,0 +1,36 @@
+{
+  "name": "starter_kit",
+  "description": "Use this as a simple structure for a simple start to a simple site.",
+  "main": "gulpfile.js",
+  "authors": [
+    "Nehme Roumani"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "starter",
+    "kit"
+  ],
+  "homepage": "https://github.com/hassannmoussaa/starterkit",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "^2.2.0",
+    "alertjs": "^1.0.2",
+    "requestjs": "*",
+    "popup.js": "^1.0.1",
+    "moment": "^2.14.1",
+    "jquery": "2.2.4",
+    "nestable2": "^1.2.4",
+    "tinymce": "^4.4.3",
+    "domurl": "^2.1.7",
+    "owl.carousel": "^2.1.1",
+    "dot": "^1.1.2",
+    "select2": "^4.0.3"
+  }
+}

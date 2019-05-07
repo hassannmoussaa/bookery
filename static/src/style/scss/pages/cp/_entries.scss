@@ -1,0 +1,22 @@
+/* ============= ENTRIES ======== */
+
+#entries {
+    margin-bottom: 30px;
+    .entries-toolbar {
+        background-color: #E6E6E8;
+        padding: 10px;
+        overflow: hidden;
+        clear: both;
+        button {
+            min-width: 80px;
+        }
+        .entries-title{
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+    .entries-table {
+        background-color: white;
+    }
+}

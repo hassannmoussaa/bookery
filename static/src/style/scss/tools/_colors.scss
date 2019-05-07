@@ -1,0 +1,106 @@
+//
+// Some Useful color Vars via http://clrs.cc/
+//
+
+//Colors
+//// Cool
+$aqua:  #7FDBFF;
+$blue:  #0074D9;
+$navy:  #001F3F;
+$teal:  #39CCCC;
+$green: #2ECC40;
+$olive: #3D9970;
+$lime:  #01FF70;
+
+////Warm
+$yellow:  #FFDC00;
+$orange:  #FF851B;
+$red:     #e74c3c;
+$fuchsia: #F012BE;
+$purple:  #B10DC9;
+$maroon:  #85144B;
+
+//// Gray Scale
+$white:  #FFFFFF;
+$silver: #DDDDDD;
+$black:  #111111;
+
+//// Grayscale 
+$gray-dark:                 #373a3c !default;
+$gray:                      #55595c !default;
+$gray-light:                #818a91 !default;
+$gray-lighter:              #eceeef !default;
+$gray-lightest:             #f7f7f9 !default;
+
+$brand-success:             #5cb85c !default;
+$brand-info:                #5bc0de !default;
+$brand-warning:             #f0ad4e !default;
+$brand-danger:              #d9534f !default;
+
+.danger-fill{
+    color: white !important;
+    background-color: $brand-danger !important;
+    &:hover{
+        background-color: lighten($brand-danger, 4%) !important;
+    }
+}
+
+.danger-outline{
+    color: $brand-danger !important;
+    border-color: $brand-danger !important;
+    &:hover{
+      color: white !important;
+      background-color: $brand-danger !important;
+    }
+}
+
+.info-fill{
+    color: white !important;
+    background-color: $brand-info !important;
+    &:hover{
+        background-color: lighten($brand-info, 4%) !important;
+    }
+}
+
+.info-outline{
+    color: $brand-info !important;
+    border-color: $brand-info !important;
+    &:hover{
+        color: white !important;
+        background-color: $brand-info !important;
+    }
+}
+
+.success-fill{
+    color: white !important;
+    background-color: $brand-success !important;
+    &:hover{
+        background-color: lighten($brand-success, 4%) !important;
+    }
+}
+
+.success-outline{
+    color: $brand-success !important;
+    border-color: $brand-success !important;
+    &:hover{
+        color: white !important;
+        background-color: $brand-success !important;
+    }
+}
+
+.warning-fill{
+    color: white !important;
+    background-color: $brand-warning !important;
+    &:hover{
+        background-color: lighten($brand-warning, 4%) !important;
+    }
+}
+
+.warning-outline{
+    color: $brand-warning !important;
+    border-color: $brand-warning !important;
+    &:hover{
+        color: white !important;
+        background-color: $brand-warning !important;
+    }
+}

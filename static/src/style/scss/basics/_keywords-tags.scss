@@ -1,0 +1,24 @@
+/* ============= KEYWORDS TAGS ============ */
+.keywords-tags{
+    margin: 0;
+    padding: 5px;
+    list-style: none;
+    @include inline-block();
+
+    .tag{
+        background-color: #eee;
+        color: $gray;
+        padding: 3px 10px;
+        @include inline-block();
+        @include border-radius(3px);
+        margin: 5px 0 0;
+        @if $direction == rtl{
+            margin-left: 8px;
+        }@else{
+            margin-right: 8px;
+        }
+        &:last-of-type{
+            margin-top: 5px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+/* ========== EMPTY CONTENT ========== */
+
+.empty-content{
+    padding: 30px 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    color: $gray-light;
+    text-transform: capitalize;
+
+    &.big{
+        padding: 100px 15px;
+    }
+}

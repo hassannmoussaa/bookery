@@ -1,0 +1,17 @@
+// Blockquote
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+blockquote{
+	@if $direction == rtl{
+		border-right: .3rem solid $brand-primary;
+	}@else{
+		border-left: .3rem solid $brand-primary;
+	}
+	margin-left: 0;
+	margin-right: 0;
+	padding: 15px;
+
+	& *:last-child{
+		margin: 0;
+    }
+}

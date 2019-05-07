@@ -1,0 +1,72 @@
+// Form
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+textarea,
+select{
+	@include appearance(none); // Removes awkward default styles on some inputs for iOS
+	background-color: $input-bg-color;
+	border: 1px solid $input-border-color;
+	@include border-radius(3px);
+	@include box-shadow(none);
+	padding: 6px 12px;
+	font-size: 14px;
+	@include inline-block();
+	margin: 0;
+	line-height: 1.45;
+
+	&:focus{
+		border: 1px solid $input-active-border-color;
+		outline: 0;
+    }
+
+	&.field-block{
+		width: 100%;
+		display: block;
+	}
+}
+select{
+	background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyOSAxNCIgd2lkdGg9IjI5Ij48cGF0aCBmaWxsPSIjZDFkMWQxIiBkPSJNOS40IDMuNmw1IDcgNS4yLTciLz48L3N2Zz4=) center right no-repeat;
+	padding: 5px 25px 5px 20px;
+	min-height: 36px;
+	
+	&:focus{
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyOSAxNCIgd2lkdGg9IjI5Ij48cGF0aCBmaWxsPSIjOWI0ZGNmIiBkPSJNMTkuNiAzLjZIOS40bDUgNyIvPjwvc3ZnPg==);
+    }
+}
+textarea{
+	min-height: 6.5rem;
+	padding-bottom: .6rem;
+	padding-top: .6rem;
+}
+label,
+legend{
+	display: block;
+	font-size: 16px;;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+fieldset{
+	border-width: 0;
+	padding: 0;
+}
+
+input[type='checkbox'],
+input[type='radio']{
+	display: inline;
+}
+
+.label-inline{
+	@include inline-block();
+	@if $direction == rtl{
+		margin-right: 5px;
+	}@else{
+		margin-left: 5px;
+	}
+}
