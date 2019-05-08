@@ -86,12 +86,12 @@ func GetUserBookById(id int32) *UserBook {
 			clean.Error(err)
 			return nil
 		}
-		return category
+		return userbook
 	}
 	return nil
 }
 func GetUserBookByUserId(userid int32) *UserBook {
-	if id != 0 {
+	if userid != 0 {
 		sql := "SELECT id , book_id FROM " + db.UserBookTable + " WHERE user_id=$1"
 		row := connection.QueryRow(sql, userid)
 		userbook := &UserBook{}
@@ -105,14 +105,14 @@ func GetUserBookByUserId(userid int32) *UserBook {
 			clean.Error(err)
 			return nil
 		}
-		return category
+		return userbook
 	}
 	return nil
 }
 func GetUserBookByBookId(bookid int32) *UserBook {
-	if id != 0 {
+	if bookid != 0 {
 		sql := "SELECT id , user_id FROM " + db.UserBookTable + " WHERE bookid=$1"
-		row := connection.QueryRow(sql, userid)
+		row := connection.QueryRow(sql, bookid)
 		userbook := &UserBook{}
 		user := &User{}
 		book := &Book{}
@@ -124,7 +124,7 @@ func GetUserBookByBookId(bookid int32) *UserBook {
 			clean.Error(err)
 			return nil
 		}
-		return category
+		return userbook
 	}
 	return nil
 }
@@ -141,11 +141,8 @@ func DeleteUserBook(id int32) bool {
 	return false
 }
 
-func PrepareAndValidateUserBook(category *UserBook) error {
-	if category != nil {
-		if category.category_name == "" {
-			return errors.New("category_name_is_required")
-		}
+func PrepareAndValidateUserBook(userbook *UserBook) error {
+	if userbook != nil {
 
 		return nil
 	}

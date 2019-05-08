@@ -19,6 +19,7 @@ const (
 	TransactionTable string = dbSchema + dbSchemaJoiner + "transaction"
 	OrderTable       string = dbSchema + dbSchemaJoiner + "order"
 	UserBookTable    string = dbSchema + dbSchemaJoiner + "user_book"
+	CardOrderTable   string = dbSchema + dbSchemaJoiner + "order_card"
 )
 
 //It Connect to database and return the connection
