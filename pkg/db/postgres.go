@@ -13,7 +13,9 @@ const (
 	dbSchema       string = "public"
 	dbSchemaJoiner string = "."
 	AdminTable     string = dbSchema + dbSchemaJoiner + "admin"
-
+	UserTable      string = dbSchema + dbSchemaJoiner + "user"
+	CategoryTable  string = dbSchema + dbSchemaJoiner + "category"
+	BookTable      string = dbSchema + dbSchemaJoiner + "book"
 )
 
 //It Connect to database and return the connection

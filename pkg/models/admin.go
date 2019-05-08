@@ -1,29 +1,23 @@
 package models
 
 import (
-	"crypto/md5"
-	"encoding/hex"
 	"errors"
+	"math"
 	"strconv"
 	"strings"
-	"time"
 
+	"github.com/hassannmoussaa/bookery/pkg/db"
 	"github.com/hassannmoussaa/pill.go/auth"
 	"github.com/hassannmoussaa/pill.go/clean"
-	"github.com/hassannmoussaa/pill.go/hooks"
 	"github.com/hassannmoussaa/pill.go/sanitize"
 	"github.com/hassannmoussaa/pill.go/validate"
-	"github.com/hassannmoussaa/bookery/pkg/db"
 )
 
 type Admin struct {
-	id          int32
-	email       string
-	name        string
-	lockedOn    *time.Time
-	password    string
-	hash        string
-	accessToken string
+	id       int32
+	email    string
+	name     string
+	password string
 }
 
 func (this *Admin) ToMap(prefix string, excluded bool, fields ...string) map[string]interface{} {
@@ -62,21 +56,6 @@ func (this *Admin) Name() string {
 func (this *Admin) Password() string {
 	return this.password
 }
-func (this *Admin) Hash() string {
-	return this.hash
-}
-func (this *Admin) AccessToken() string {
-	return this.accessToken
-}
-func (this *Admin) IsLocked() bool {
-	if this.lockedOn != nil {
-		now := time.Now().UTC()
-		if now.Sub(*this.lockedOn).Minutes() < 5 {
-			return true
-		}
-	}
-	return false
-}
 
 func (this *Admin) SetID(value int32) {
 	this.id = value
@@ -89,12 +68,6 @@ func (this *Admin) SetName(value string) {
 }
 func (this *Admin) SetPassword(value string) {
 	this.password = value
-}
-func (this *Admin) SetHash(value string) {
-	this.hash = value
-}
-func (this *Admin) SetAccessToken(value string) {
-	this.accessToken = value
 }
 
 func AddAdmin(admin *Admin) *Admin {
@@ -110,14 +83,13 @@ func AddAdmin(admin *Admin) *Admin {
 	}
 	return nil
 }
-
 func GetAdminById(id int32) *Admin {
 	if id != 0 {
-		sql := "SELECT coalesce(email, ''), coalesce(name, ''), coalesce(password, ''), coalesce(hash, ''), coalesce(locked_on, NULL) FROM " + db.AdminTable + " WHERE id=$1"
+		sql := "SELECT coalesce(email, ''), coalesce(name, ''), coalesce(password, '') FROM " + db.AdminTable + " WHERE id=$1"
 		row := connection.QueryRow(sql, id)
 		admin := &Admin{}
 		admin.id = id
-		err := row.Scan(&admin.email, &admin.name, &admin.password, &admin.hash, &admin.lockedOn)
+		err := row.Scan(&admin.email, &admin.name, &admin.password)
 		if err != nil {
 			clean.Error(err)
 			return nil
@@ -126,55 +98,13 @@ func GetAdminById(id int32) *Admin {
 	}
 	return nil
 }
-
-func GenerateHashForAdmin(admin *Admin) string {
-	if admin != nil {
-		data := []byte(admin.Email() + admin.Password() + strconv.Itoa(int(admin.ID())) + time.Now().String())
-		hasher := md5.New()
-		hasher.Write([]byte(data))
-		hash := hex.EncodeToString(hasher.Sum(nil))
-		return hash
-	}
-	return ""
-}
-
-func LockAdminAccount(admin *Admin) bool {
-	if admin != nil {
-		admin.hash = GenerateHashForAdmin(admin)
-		now := time.Now().UTC()
-		admin.lockedOn = &now
-		sql := "UPDATE " + db.AdminTable + " SET locked_on=$1, hash=$2 WHERE id=$3"
-		_, err := connection.Exec(sql, admin.lockedOn, admin.hash, admin.id)
-		if err != nil {
-			clean.Error(err)
-			return false
-		}
-		hooks.Main.DoAction("admin_account_is_locked", admin)
-		return true
-	}
-	return false
-}
-
-func UnlockAdminAccount(adminID int, hash string) bool {
-	if adminID != 0 && hash != "" {
-		sql := `UPDATE ` + db.AdminTable + ` SET locked_on=null, hash='' WHERE id=$1 AND hash=$2`
-		_, err := connection.Exec(sql, adminID, hash)
-		if err != nil {
-			clean.Error(err)
-			return false
-		}
-		return true
-	}
-	return false
-}
-
 func GetAdminByEmail(email string) *Admin {
 	if email != "" {
-		sql := "SELECT id, coalesce(name, ''), coalesce(password, ''), coalesce(hash, ''), coalesce(locked_on, null) FROM " + db.AdminTable + " WHERE email=$1"
+		sql := "SELECT id, coalesce(name, ''), coalesce(password, '') FROM " + db.AdminTable + " WHERE email=$1"
 		row := connection.QueryRow(sql, email)
 		admin := &Admin{}
 		admin.email = email
-		err := row.Scan(&admin.id, &admin.name, &admin.password, &admin.hash, &admin.lockedOn)
+		err := row.Scan(&admin.id, &admin.name, &admin.password)
 		if err != nil {
 			clean.Error(err)
 			return nil
@@ -183,7 +113,6 @@ func GetAdminByEmail(email string) *Admin {
 	}
 	return nil
 }
-
 func IsAdminEmailExist(email string, opts ...int32) bool {
 	if email != "" {
 		sql := "SELECT id FROM " + db.AdminTable + " WHERE email=$1"
@@ -210,6 +139,95 @@ func IsAdminEmailExist(email string, opts ...int32) bool {
 	}
 	return true
 }
+
+func DeleteAdmin(id int32) bool {
+	if id != 0 {
+		sql := "DELETE FROM " + db.AdminTable + " WHERE id=$1"
+		_, err := connection.Exec(sql, id)
+		if err != nil {
+			clean.Error(err)
+			return false
+		}
+		return true
+	}
+	return false
+}
+func GetAdmins(page int32, count int32, sinceID int32) ([]*Admin, bool, int32) {
+	sql := "SELECT id, coalesce(name, ''), coalesce(email, ''), coalesce(password, '') FROM " + db.AdminTable
+	values := make([]interface{}, 3)
+	j := 0
+	if sinceID > 0 {
+		sql += " WHERE "
+	}
+	if sinceID > 0 {
+		sql += "id<$" + strconv.Itoa(j+1)
+		values[j] = sinceID
+		j++
+	}
+	sql += ` ORDER BY id DESC`
+	if sinceID == 0 {
+		if page > 0 {
+			offset := (page - 1) * count
+			sql += " OFFSET $" + strconv.Itoa(j+1)
+			values[j] = offset
+			j++
+		}
+	}
+	if count > 0 {
+		sql += " LIMIT $" + strconv.Itoa(j+1)
+		if (sinceID != 0 && count > 0) || (page <= 0 && count > 0) {
+			values[j] = count + 1
+		} else {
+			values[j] = count * 4
+		}
+		j++
+	}
+	values = values[:j]
+	rows, err := connection.Query(sql, values...)
+	defer rows.Close()
+	if err != nil {
+		clean.Error(err)
+		return nil, false, 0
+	}
+	admins := []*Admin{}
+	for rows.Next() {
+		admin := &Admin{}
+		err = rows.Scan(&admin.id, &admin.name, &admin.email, &admin.password)
+		if err != nil {
+			clean.Error(err)
+			continue
+		}
+		admins = append(admins, admin)
+	}
+	var hasMore bool
+	var nextPagesCount int32
+	adminsCount := int32(len(admins))
+	if (sinceID != 0 && count > 0) || (page <= 0 && count > 0) {
+		if adminsCount > count {
+			hasMore = true
+			admins = admins[:count]
+		}
+	} else if page > 0 {
+		if adminsCount > count && count > 0 {
+			hasMore = true
+			nextPagesCount = int32(math.Ceil(float64(adminsCount)/float64(count))) - 1
+			admins = admins[:count]
+		}
+	}
+	return admins, hasMore, nextPagesCount
+}
+func GetAdminsCount() int {
+	sql := "SELECT COUNT(*) FROM " + db.AdminTable
+	row := connection.QueryRow(sql)
+	var count int64
+	err := row.Scan(&count)
+	if err != nil {
+		clean.Error(err)
+		return 0
+	}
+	return int(count)
+}
+
 func PrepareAndValidateAdmin(admin *Admin) error {
 	if admin != nil {
 		if admin.email == "" {

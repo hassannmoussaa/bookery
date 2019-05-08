@@ -4,10 +4,10 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/hassannmoussaa/pill.go/auth"
-	"github.com/hassannmoussaa/pill.go/helpers"
 	"github.com/hassannmoussaa/bookery/pkg/appCtx"
 	"github.com/hassannmoussaa/bookery/pkg/models"
+	"github.com/hassannmoussaa/pill.go/auth"
+	"github.com/hassannmoussaa/pill.go/helpers"
 	"github.com/valyala/fasthttp"
 )
 
@@ -18,9 +18,7 @@ type AdminAuthCtrl struct {
 func loginAdmin(email string, password string) (int, string, *models.Admin, error) {
 	requestedAdmin := models.GetAdminByEmail(email)
 	if requestedAdmin != nil {
-		if requestedAdmin.IsLocked() {
-			return http.StatusUnauthorized, "", nil, errors.New("account_is_locked")
-		}
+
 		jwtAuth := auth.GetJWTAuth()
 		if auth.CompareHashAndPassword(password, requestedAdmin.Password()) {
 			auth.ResetUserAttempts(int(requestedAdmin.ID()))
@@ -29,13 +27,6 @@ func loginAdmin(email string, password string) (int, string, *models.Admin, erro
 				return http.StatusInternalServerError, "", nil, nil
 			}
 			return http.StatusOK, token, requestedAdmin, nil
-		} else {
-			if !requestedAdmin.IsLocked() {
-				auth.AddUserAttempt(int(requestedAdmin.ID()))
-				if auth.IsUserOverpassMaxAttemptsNumber(int(requestedAdmin.ID())) {
-					models.LockAdminAccount(requestedAdmin)
-				}
-			}
 		}
 		return http.StatusUnauthorized, "", nil, errors.New("authentication_credentials_invalid")
 	}
@@ -66,7 +57,6 @@ func (this *AdminAuthCtrl) Login(requestCtx *fasthttp.RequestCtx) {
 	} else {
 		rememberMe := requestCtx.PostArgs().GetBool("remember_me")
 		auth.SetAccessTokenFastHttpCookie(requestCtx, accessToken, rememberMe)
-		admin.SetAccessToken(accessToken)
 		fields, excluded := this.SetFields(requestCtx)
 		data := admin.ToMap("", excluded, fields...)
 		this.Success(requestCtx, data, "login_successfully")

@@ -1,16 +1,16 @@
 package webCtrls
 
 import (
+	"github.com/hassannmoussaa/bookery/pkg/middlewares"
 	"github.com/hassannmoussaa/pill.go/fastmux"
 	"github.com/hassannmoussaa/pill.go/fastmux/util"
-	"github.com/hassannmoussaa/bookery/pkg/middlewares"
 	"github.com/valyala/fasthttp"
 )
 
 func Register() *fastmux.Mux {
 	//New Router
 	router := fastmux.New()
-	
+
 	router.Get("/health").ThenFunc(func(requestCtx *fasthttp.RequestCtx) {
 		requestCtx.Write([]byte("I am alive!"))
 	})
@@ -31,11 +31,9 @@ func Register() *fastmux.Mux {
 
 	notFoundCtrl := &NotFoundCtrl{}
 	cpCtrl := &CPCtrl{}
-	accountCtrl := &AccountCtrl{}
 
 	router.Get("/404").ThenFunc(notFoundCtrl.Get)
 	router.Get("/cp/login").ThenFunc(cpCtrl.Login)
-	router.Get("/unlock-admin-account").ThenFunc(accountCtrl.UnlockAdmin)
 
 	router.Use(middlewares.IsAuthenticatedAdmin)
 	router.Get("/cp").ThenFunc(cpCtrl.Dashboard)
