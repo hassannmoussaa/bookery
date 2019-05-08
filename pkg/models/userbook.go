@@ -62,7 +62,7 @@ func AddUserBook(userbook *UserBook) *UserBook {
 	if userbook != nil {
 		sql := "INSERT INTO " + db.UserBookTable + " (user_id , book_id) VALUES ($1, $2) RETURNING id;"
 		row := connection.QueryRow(sql, userbook.user.id, userbook.book.id)
-		err := row.Scan(&category.id)
+		err := row.Scan(&userbook.id)
 		if err != nil {
 			clean.Error(err)
 			return nil

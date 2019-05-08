@@ -31,11 +31,23 @@ func (this *CardOrder) ToMap(prefix string, excluded bool, fields ...string) map
 	if this.ID() != 0 && check(prefix+"id", fields...) {
 		result["id"] = this.ID()
 	}
-	if this.User().FullName() != "" && check(prefix+"full_name", fields...) {
-		result["full_name"] = this.User().FullName()
+	if this.User().FullName() != "" && check(prefix+"username", fields...) {
+		result["username"] = this.User().FullName()
 	}
-	if this.Book().BookName() != "" && check(prefix+"book_name", fields...) {
-		result["book_name"] = this.Book().BookName()
+	if this.Transaction().UserOldCredit() != 0 && check(prefix+"user_old_credit", fields...) {
+		result["user_old_credit"] = this.Transaction().UserOldCredit()
+	}
+	if this.Transaction().UserNewCredit() != 0 && check(prefix+"user_new_credit", fields...) {
+		result["user_new_credit"] = this.Transaction().UserNewCredit()
+	}
+	if this.Date() != "" && check(prefix+"date", fields...) {
+		result["date"] = this.Date()
+	}
+	if this.CardNumber() != 0 && check(prefix+"card_number", fields...) {
+		result["card_number"] = this.CardNumber()
+	}
+	if this.Credit() != 0 && check(prefix+"credit", fields...) {
+		result["credit"] = this.Credit()
 	}
 	if len(result) == 0 {
 		return nil
