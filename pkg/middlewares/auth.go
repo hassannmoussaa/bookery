@@ -1,12 +1,12 @@
 package middlewares
 
 import (
-	"github.com/hassannmoussaa/pill.go/auth"
-	"github.com/hassannmoussaa/pill.go/fastmux/util"
-	"github.com/hassannmoussaa/pill.go/helpers"
 	"github.com/hassannmoussaa/bookery/pkg/appCtx"
 	"github.com/hassannmoussaa/bookery/pkg/models"
 	"github.com/hassannmoussaa/bookery/pkg/textualContent"
+	"github.com/hassannmoussaa/pill.go/auth"
+	"github.com/hassannmoussaa/pill.go/fastmux/util"
+	"github.com/hassannmoussaa/pill.go/helpers"
 	"github.com/valyala/fasthttp"
 )
 
@@ -29,11 +29,48 @@ func GetLoggedAdmin(next fasthttp.RequestHandler) fasthttp.RequestHandler {
 	}
 	return fn
 }
- 
+func GetLoggedUser(next fasthttp.RequestHandler) fasthttp.RequestHandler {
+	fn := func(requestCtx *fasthttp.RequestCtx) {
+		ctx := appCtx.Get(requestCtx)
+		//if ctx.LoggedUser == nil {
+		token := auth.GetTokenFromFastHttpRequest(requestCtx)
+		isAuthenticated, userId, role := auth.IsAuthenticated(token)
+		if isAuthenticated && role == "user" {
+			ctx.LoggedUser = models.GetUserById(int32(userId))
+			if ctx.LoggedAdmin != nil {
+				auth.RefreshAccessTokenFastHttpCookie(requestCtx, userId, role)
+			}
+		}
+		//}
+		if next != nil {
+			next(requestCtx)
+		}
+	}
+	return fn
+}
 func IsAuthenticatedAdmin(next fasthttp.RequestHandler) fasthttp.RequestHandler {
 	fn := func(requestCtx *fasthttp.RequestCtx) {
 		ctx := appCtx.Get(requestCtx)
 		if ctx.LoggedAdmin == nil {
+			if helpers.BytesToString(requestCtx.Response.Header.Peek("Content-Type")) == "application/json" {
+				requestCtx.SetStatusCode(401)
+				requestCtx.Write([]byte(`{"status": "fail", "message": "` + textualContent.OfErrorMsg("unauthorized") + `"}`))
+			} else {
+				requestCtx.Redirect("/cp/login", 307)
+			}
+			return
+		} else {
+			if next != nil {
+				next(requestCtx)
+			}
+		}
+	}
+	return fn
+}
+func IsAuthenticatedUser(next fasthttp.RequestHandler) fasthttp.RequestHandler {
+	fn := func(requestCtx *fasthttp.RequestCtx) {
+		ctx := appCtx.Get(requestCtx)
+		if ctx.LoggedUser == nil {
 			if helpers.BytesToString(requestCtx.Response.Header.Peek("Content-Type")) == "application/json" {
 				requestCtx.SetStatusCode(401)
 				requestCtx.Write([]byte(`{"status": "fail", "message": "` + textualContent.OfErrorMsg("unauthorized") + `"}`))

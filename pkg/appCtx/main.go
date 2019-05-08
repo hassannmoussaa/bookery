@@ -1,18 +1,19 @@
 package appCtx
 
 import (
-	"github.com/hassannmoussaa/fasthttpcontext"
 	"github.com/hassannmoussaa/bookery/pkg/models"
+	"github.com/hassannmoussaa/fasthttpcontext"
 	"github.com/hassannmoussaa/pill.go/antiCSRF"
 	"github.com/hassannmoussaa/pill.go/helpers"
 	"github.com/valyala/fasthttp"
 )
 
 type Context struct {
-	LoggedAdmin  *models.Admin
-	QueryParams  *QueryParams
-	URLPath      string
-	CSRFToken    *antiCSRF.CSRFToken
+	LoggedAdmin *models.Admin
+	LoggedUser  *models.User
+	QueryParams *QueryParams
+	URLPath     string
+	CSRFToken   *antiCSRF.CSRFToken
 }
 
 type QueryParams struct {

@@ -1,9 +1,12 @@
 package apiCtrls
 
 import (
-	"github.com/hassannmoussaa/pill.go/helpers"
+	"strconv"
+
 	"github.com/hassannmoussaa/bookery/pkg/appCtx"
 	"github.com/hassannmoussaa/bookery/pkg/models"
+	"github.com/hassannmoussaa/pill.go/fastmux"
+	"github.com/hassannmoussaa/pill.go/helpers"
 	"github.com/valyala/fasthttp"
 )
 
@@ -34,6 +37,20 @@ func (this *AdminCtrl) GetMe(requestCtx *fasthttp.RequestCtx) {
 	this.Success(requestCtx, data, "")
 }
 
+func (this *AdminCtrl) Delete(requestCtx *fasthttp.RequestCtx) {
+	adminId, _ := strconv.Atoi(fastmux.GetParam(requestCtx, "admin_id"))
+	ctx := appCtx.Get(requestCtx)
+	if int32(adminId) != ctx.LoggedAdmin.ID() {
+		if err := models.DeleteAdmin(int32(adminId)); err {
+			this.Success(requestCtx, nil, "admin_was_deleted_successfully", 200)
+		} else {
+			this.Fail(requestCtx, nil, "admin_cannot_be_deleted", 400)
+		}
+	} else {
+		this.Fail(requestCtx, nil, "cannot_delete_your_self", 400)
+	}
+
+}
 func ParseAdminFromRequest(requestCtx *fasthttp.RequestCtx) *models.Admin {
 	admin := &models.Admin{}
 	admin.SetName(helpers.BytesToString(requestCtx.PostArgs().Peek("name")))

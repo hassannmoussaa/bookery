@@ -22,7 +22,7 @@ type Book struct {
 	side_image  string
 	is_verified bool
 	is_recived  bool
-	price       string
+	price       int
 }
 
 func (this *Book) ToMap(prefix string, excluded bool, fields ...string) map[string]interface{} {
@@ -67,7 +67,7 @@ func (this *Book) ToMap(prefix string, excluded bool, fields ...string) map[stri
 	if check(prefix+"is_recived", fields...) {
 		result["is_recived"] = this.IsRecived()
 	}
-	if this.Price() != "" && check(prefix+"price", fields...) {
+	if this.Price() != 0 && check(prefix+"price", fields...) {
 		result["price"] = this.Price()
 	}
 	if len(result) == 0 {
@@ -109,7 +109,7 @@ func (this *Book) IsVerified() bool {
 func (this *Book) IsRecived() bool {
 	return this.is_recived
 }
-func (this *Book) Price() string {
+func (this *Book) Price() int {
 	return this.price
 }
 
@@ -146,7 +146,7 @@ func (this *Book) SetIsVerified(value bool) {
 func (this *Book) SetIsRecived(value bool) {
 	this.is_recived = value
 }
-func (this *Book) SetPrice(value string) {
+func (this *Book) SetPrice(value int) {
 	this.price = value
 }
 
@@ -165,7 +165,7 @@ func AddBook(book *Book) *Book {
 }
 func GetBookById(id int32) *Book {
 	if id != 0 {
-		sql := "SELECT coalesce(book_name, ''), category_id, coalesce(author_name, ''), coalesce(page_count, 0), coalesce(quality, ''), coalesce(front_image, ''), coalesce(back_image, ''), coalesce(side_image, ''), coalesce(is_verified, false), coalesce(is_recived, false), coalesce(price, '') FROM " + db.BookTable + " WHERE id=$1"
+		sql := "SELECT coalesce(book_name, ''), category_id, coalesce(author_name, ''), coalesce(page_count, 0), coalesce(quality, ''), coalesce(front_image, ''), coalesce(back_image, ''), coalesce(side_image, ''), coalesce(is_verified, false), coalesce(is_recived, false), coalesce(price, 0) FROM " + db.BookTable + " WHERE id=$1"
 		row := connection.QueryRow(sql, id)
 		book := &Book{}
 		category := &Category{}
@@ -194,7 +194,7 @@ func DeleteBook(id int32) bool {
 	return false
 }
 func GetBooks(page int32, count int32, sinceID int32) ([]*Book, bool, int32) {
-	sql := "SELECT id, coalesce(book_name, ''), category_id, coalesce(author_name, ''), coalesce(page_count, 0), coalesce(quality, ''), coalesce(front_image, ''), coalesce(back_image, ''), coalesce(side_image, ''), coalesce(is_verified, false), coalesce(is_recived, false), coalesce(price, '') FROM " + db.BookTable
+	sql := "SELECT id, coalesce(book_name, ''), category_id, coalesce(author_name, ''), coalesce(page_count, 0), coalesce(quality, ''), coalesce(front_image, ''), coalesce(back_image, ''), coalesce(side_image, ''), coalesce(is_verified, false), coalesce(is_recived, false), coalesce(price, 0) FROM " + db.BookTable
 	values := make([]interface{}, 3)
 	j := 0
 	if sinceID > 0 {

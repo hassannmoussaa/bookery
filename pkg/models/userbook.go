@@ -140,7 +140,30 @@ func DeleteUserBook(id int32) bool {
 	}
 	return false
 }
-
+func DeleteUserBookByBookId(bookid int32) bool {
+	if bookid != 0 {
+		sql := "DELETE FROM " + db.UserBookTable + " WHERE book_id=$1"
+		_, err := connection.Exec(sql, bookid)
+		if err != nil {
+			clean.Error(err)
+			return false
+		}
+		return true
+	}
+	return false
+}
+func DeleteUserBookByUserId(userid int32) bool {
+	if userid != 0 {
+		sql := "DELETE FROM " + db.UserBookTable + " WHERE user_id=$1"
+		_, err := connection.Exec(sql, userid)
+		if err != nil {
+			clean.Error(err)
+			return false
+		}
+		return true
+	}
+	return false
+}
 func PrepareAndValidateUserBook(userbook *UserBook) error {
 	if userbook != nil {
 

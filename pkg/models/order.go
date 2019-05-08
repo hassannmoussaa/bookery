@@ -169,6 +169,30 @@ func DeleteOrder(id int32) bool {
 	}
 	return false
 }
+func DeleteOrderByBookId(bookid int32) bool {
+	if bookid != 0 {
+		sql := "DELETE FROM " + db.OrderTable + " WHERE book_id=$1"
+		_, err := connection.Exec(sql, bookid)
+		if err != nil {
+			clean.Error(err)
+			return false
+		}
+		return true
+	}
+	return false
+}
+func DeleteOrderByUserId(userid int32) bool {
+	if userid != 0 {
+		sql := "DELETE FROM " + db.OrderTable + " WHERE user_id=$1"
+		_, err := connection.Exec(sql, userid)
+		if err != nil {
+			clean.Error(err)
+			return false
+		}
+		return true
+	}
+	return false
+}
 func GetOrders(page int32, count int32, sinceID int32) ([]*Order, bool, int32) {
 	sql := "SELECT id,  user_id, book_id, transaction_id, coalesce(date, ''), coalesce(order_status, ''), coalesce(delevery_method, '') FROM " + db.OrderTable
 	values := make([]interface{}, 3)

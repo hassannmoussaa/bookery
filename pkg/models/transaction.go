@@ -138,6 +138,18 @@ func DeleteTransaction(id int32) bool {
 	}
 	return false
 }
+func DeleteTransactionByUserId(userid int32) bool {
+	if userid != 0 {
+		sql := "DELETE FROM " + db.TransactionTable + " WHERE user_id=$1"
+		_, err := connection.Exec(sql, userid)
+		if err != nil {
+			clean.Error(err)
+			return false
+		}
+		return true
+	}
+	return false
+}
 func GetTransactions(page int32, count int32, sinceID int32) ([]*Transaction, bool, int32) {
 	sql := "SELECT id,  user_id, coalesce(user_old_credit, 0), coalesce(user_new_credit, 0), coalesce(date, '')FROM " + db.TransactionTable
 	values := make([]interface{}, 3)
