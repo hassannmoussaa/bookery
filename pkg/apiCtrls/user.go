@@ -68,6 +68,23 @@ func (this *UserCtrl) Delete(requestCtx *fasthttp.RequestCtx) {
 		this.Fail(requestCtx, nil, "cannot_delete_your_self", 400)
 	}
 }
+func (this *UserCtrl) Block(requestCtx *fasthttp.RequestCtx) {
+	userId, _ := strconv.Atoi(fastmux.GetParam(requestCtx, "user_id"))
+	if err := models.BlockUser(models.GetUserById(int32(userId))); err {
+		this.Success(requestCtx, nil, "user_was_blocked_successfully", 200)
+	} else {
+		this.Fail(requestCtx, nil, "user_cannot_be_blocked", 400)
+	}
+}
+func (this *UserCtrl) UnBlock(requestCtx *fasthttp.RequestCtx) {
+	userId, _ := strconv.Atoi(fastmux.GetParam(requestCtx, "user_id"))
+	if err := models.UnBlockUser(models.GetUserById(int32(userId))); err {
+		this.Success(requestCtx, nil, "user_was_unblocked_successfully", 200)
+	} else {
+		this.Fail(requestCtx, nil, "user_cannot_be_unblocked", 400)
+	}
+}
+
 func ParseUserFromRequest(requestCtx *fasthttp.RequestCtx) *models.User {
 	user := &models.User{}
 	user.SetFullName(helpers.BytesToString(requestCtx.PostArgs().Peek("full_name")))

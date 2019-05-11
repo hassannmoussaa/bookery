@@ -46,6 +46,9 @@ func Register(basePath string) *fastmux.Mux {
 	//UserCtrl
 	router.Post("/users").ThenFunc(userCtrl.Add)
 	router.Delete("/users/:user_id").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(userCtrl.Delete)
+	router.Post("/users/block/:user_id").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(userCtrl.Block)
+	router.Post("/users/unblock/:user_id").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(userCtrl.UnBlock)
+
 	//BookCtrl
 	router.Post("/books").Use(middlewares.IsAuthenticatedUser).ThenFunc(bookCtrl.Add)
 	router.Delete("/admin/books/:book_id").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(bookCtrl.Delete)
@@ -62,5 +65,6 @@ func Register(basePath string) *fastmux.Mux {
 	router.Post("/cardorders").Use(middlewares.IsAuthenticatedUser).ThenFunc(cardorderCtrl.Add)
 	router.Delete("/admin/cardorders/:card_order_id").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cardorderCtrl.Delete)
 	router.Delete("/user/cardorders/:card_order_id").Use(middlewares.IsAuthenticatedUser).ThenFunc(cardorderCtrl.Delete)
+
 	return router
 }

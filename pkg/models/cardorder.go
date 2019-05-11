@@ -217,6 +217,17 @@ func GetCardOrders(page int32, count int32, sinceID int32) ([]*CardOrder, bool, 
 	}
 	return cardorders, hasMore, nextPagesCount
 }
+func GetCardOrdersCount() int {
+	sql := "SELECT COUNT(*) FROM " + db.CardOrderTable
+	row := connection.QueryRow(sql)
+	var count int64
+	err := row.Scan(&count)
+	if err != nil {
+		clean.Error(err)
+		return 0
+	}
+	return int(count)
+}
 
 func PrepareAndValidateCardOrder(cardorder *CardOrder) error {
 	if cardorder != nil {

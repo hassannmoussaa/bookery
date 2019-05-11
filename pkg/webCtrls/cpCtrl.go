@@ -25,3 +25,8 @@ func (this *CPCtrl) Dashboard(requestCtx *fasthttp.RequestCtx) {
 	vm := viewsmodels.GetCPDashboard(ctx)
 	this.Write(requestCtx, vm)
 }
+func (this *CPCtrl) Users(requestCtx *fasthttp.RequestCtx) {
+	ctx := appCtx.Get(requestCtx)
+	vm := viewsmodels.GetCPUsers(ctx)
+	this.Write(requestCtx, vm)
+}

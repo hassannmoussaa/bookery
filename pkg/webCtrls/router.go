@@ -34,9 +34,7 @@ func Register() *fastmux.Mux {
 
 	router.Get("/404").ThenFunc(notFoundCtrl.Get)
 	router.Get("/cp/login").ThenFunc(cpCtrl.Login)
-
-	router.Use(middlewares.IsAuthenticatedAdmin)
-	router.Get("/cp").ThenFunc(cpCtrl.Dashboard)
-
+	router.Get("/cp").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.Dashboard)
+	router.Get("/cp/users").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.Users)
 	return router
 }

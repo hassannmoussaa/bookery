@@ -9,6 +9,7 @@ import (
 	"github.com/hassannmoussaa/bookery/pkg/db"
 	"github.com/hassannmoussaa/pill.go/auth"
 	"github.com/hassannmoussaa/pill.go/clean"
+	"github.com/hassannmoussaa/pill.go/hooks"
 	"github.com/hassannmoussaa/pill.go/validate"
 )
 
@@ -91,7 +92,7 @@ func (this *User) SetEmail(value string) {
 	this.email = value
 }
 func (this *User) SetFullName(value string) {
-	this.full_address = value
+	this.full_name = value
 }
 func (this *User) SetPassword(value string) {
 	this.password = value
@@ -111,7 +112,7 @@ func (this *User) SetsBlocked(value bool) {
 
 func AddUser(user *User) *User {
 	if user != nil {
-		sql := "INSERT INTO " + db.UserTable + " (email, name, password, full_address, phone_number, user_credit, is_blocked) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id;"
+		sql := "INSERT INTO " + db.UserTable + " (email, full_name, password, full_address, phone_number, user_credit, is_blocked) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id;"
 		row := connection.QueryRow(sql, user.email, user.full_name, user.password, user.full_address, user.phone_number, user.user_credit, user.is_blocked)
 		err := row.Scan(&user.id)
 		if err != nil {
@@ -124,7 +125,7 @@ func AddUser(user *User) *User {
 }
 func GetUserById(id int32) *User {
 	if id != 0 {
-		sql := "SELECT coalesce(email, ''), coalesce(name, ''), coalesce(password, ''), coalesce(full_address, ''), coalesce(phone_number, ''), coalesce(user_credit, 0), coalesce(is_blocked, false) FROM " + db.UserTable + " WHERE id=$1"
+		sql := "SELECT coalesce(email, ''), coalesce(full_name, ''), coalesce(password, ''), coalesce(full_address, ''), coalesce(phone_number, ''), coalesce(user_credit, 0), coalesce(is_blocked, false) FROM " + db.UserTable + " WHERE id=$1"
 		row := connection.QueryRow(sql, id)
 		user := &User{}
 		user.id = id
@@ -139,7 +140,7 @@ func GetUserById(id int32) *User {
 }
 func GetUserByEmail(email string) *User {
 	if email != "" {
-		sql := "SELECT id, , coalesce(name, ''), coalesce(password, ''), coalesce(full_address, ''), coalesce(phone_number, ''), coalesce(user_credit, 0), coalesce(is_blocked, false) FROM " + db.UserTable + " WHERE email=$1"
+		sql := "SELECT id, coalesce(full_name, ''), coalesce(password, ''), coalesce(full_address, ''), coalesce(phone_number, ''), coalesce(user_credit, 0), coalesce(is_blocked, false) FROM " + db.UserTable + " WHERE email=$1"
 		row := connection.QueryRow(sql, email)
 		user := &User{}
 		user.email = email
@@ -190,8 +191,50 @@ func DeleteUser(id int32) bool {
 	}
 	return false
 }
+
+func CheckIFUserBlocked(id int32) bool {
+	var isBlocked bool
+	if id != 0 {
+		sql := "SELECT coalesce(is_blocked, false) FROM " + db.UserTable + " WHERE id=$1"
+		row := connection.QueryRow(sql, id)
+		err := row.Scan(isBlocked)
+		if err != nil {
+			clean.Error(err)
+			return false
+		}
+		return isBlocked
+	}
+	return false
+}
+func BlockUser(user *User) bool {
+	if user != nil {
+		user.is_blocked = true
+		sql := "UPDATE " + db.UserTable + " SET is_blocked=$1 WHERE id=$2"
+		_, err := connection.Exec(sql, user.is_blocked, user.id)
+		if err != nil {
+			clean.Error(err)
+			return false
+		}
+		hooks.Main.DoAction("user_account_is_blocked", user)
+		return true
+	}
+	return false
+}
+func UnBlockUser(user *User) bool {
+	if user != nil {
+		user.is_blocked = false
+		sql := "UPDATE " + db.UserTable + " SET is_blocked=$1 WHERE id=$2"
+		_, err := connection.Exec(sql, user.is_blocked, user.id)
+		if err != nil {
+			clean.Error(err)
+			return false
+		}
+		return true
+	}
+	return false
+}
 func GetUsers(page int32, count int32, sinceID int32) ([]*User, bool, int32) {
-	sql := "SELECT id, coalesce(name, ''), coalesce(password, ''), coalesce(full_address, ''), coalesce(phone_number, ''), coalesce(user_credit, 0), coalesce(is_blocked, false) FROM " + db.UserTable
+	sql := "SELECT id, coalesce(full_name, '') , coalesce(email, ''), coalesce(password, ''), coalesce(full_address, ''), coalesce(phone_number, ''), coalesce(user_credit, 0), coalesce(is_blocked, false) FROM " + db.UserTable
 	values := make([]interface{}, 3)
 	j := 0
 	if sinceID > 0 {
@@ -230,7 +273,7 @@ func GetUsers(page int32, count int32, sinceID int32) ([]*User, bool, int32) {
 	users := []*User{}
 	for rows.Next() {
 		user := &User{}
-		err = rows.Scan(&user.id, &user.full_name, &user.password, &user.full_address, &user.phone_number, &user.user_credit, &user.is_blocked)
+		err = rows.Scan(&user.id, &user.full_name, &user.email, &user.password, &user.full_address, &user.phone_number, &user.user_credit, &user.is_blocked)
 		if err != nil {
 			clean.Error(err)
 			continue

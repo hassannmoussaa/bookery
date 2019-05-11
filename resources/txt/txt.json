@@ -25,7 +25,9 @@
     "titles": {
         "page_not_found": "Page not found",
         "account_was_unlocked": "your account was unlocked",
-        "failed_to_unlock_the_account": "failed to unlock the account"
+        "failed_to_unlock_the_account": "failed to unlock the account",
+        "dashboard": "DashBoard",
+        "users": "All User"
     },
     "th": {
         "name": "name",
@@ -72,9 +74,9 @@
         "view": "view"
     },
     "metas": {
-        "title": "Starter Kit",
-        "description": "Starter Kit useful for building a web server with go",
-        "keywords": "starter,kit,web,go,golang"
+        "title": "Bookery",
+        "description": "The Bool Platform",
+        "keywords": "book,swape"
     },
     "successful_messages": {
         "login_successfully": "login successfully",
@@ -91,11 +93,14 @@
         "category_was_deleted_successfully" : "category was deleted successfully",
         "new_card_order_was_added" : "new card order was_added",
         "card_order_was_deleted_successfully" : "card order was deleted successfully",
-        "files_was_uploaded_successfully": "files was uploaded successfully"
+        "files_was_uploaded_successfully": "files was uploaded successfully",
+        "user_was_blocked_successfully" : "user was blocked successfully",
+        "user_was_unblocked_successfully" : "user was unblocked successfully"
     },
     "failure_messages": {
         "authentication_credentials_invalid": "email or password is invalid",
         "user_authentication_credentials_invalid": "email or password is invalid",
+        "account_is_blocked" : " For security reasons your account is temporarily blocked, please check your email inbox/junk ",
         "admin_cannot_be_added": "admin cannot be added, please try again",
         "admin_cannot_be_deleted": "admin cannot be deleted",
         "user_cannot_be_added :" : "user cannot be added",
@@ -109,6 +114,8 @@
         "category_cannot_be_deleted" : "category cannot be deleted",
         "card_order_cannot_be_added" : "card order cannot be added",
         "card_order_cannot_be_deleted" : "card order cannot be deleted",
+        "user_cannot_be_blocked" : "user cannot be blocked",
+        "user_cannot_be_unblocked" : "user cannot be unblocked",
         "account_is_locked": "for security reasons your account is temporarily locked, please check your email inbox/junk"
     },
     "error_messages": {

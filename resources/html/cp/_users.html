@@ -1,0 +1,89 @@
+
+<div class="container admin-customers">
+    <div class="toolbar">
+        <div class="search">
+
+            <input type="text" class="form-control" id="filter-search" placeholder="search" />
+        </div>
+
+    </div>
+		
+    <table class="table customers-table">
+        <tr>
+            <th>#</th>
+            <th>picture</th>
+            <th>Full Name</th>
+            <th>Email</th>
+			<th>Address</th>
+		    <th>PhoneNumber</th>
+			<th>Credits</th>
+            <th>status</th>
+            <th>action</th>
+        </tr>
+        	{{if .Users}} {{range $i, $user := .Users}}
+        <tr class="customer customer-2311">
+            <td class="customer-id">
+                <a href="" title="jimmy chua">                    
+                {{$user.ID}}
+                </a>
+            </td>
+            <td>
+                <img src="../../../uploads/files/default.png" class="customer-picture" />
+            </td>
+            <td class="customer-name">
+               {{$user.FullName}}
+            </td>
+            <td class="customer-username">
+                <a href="" title="jimmy chua">                    
+               {{$user.Email}}
+                </a>
+            </td>
+			<td class="customer-name">
+                 {{$user.FullAddress}}
+            </td>
+			<td class="customer-name">
+                 {{$user.PhoneNumber}}
+            </td>
+				<td class="customer-name">
+                {{$user.UserCredit}} BC
+            </td>
+			
+			{{if eq $user.IsBlocked true}}
+            <td>
+                <span class="tag customer-status-verified tag-default">blocked</span> 
+            </td>
+			{{else}}
+				 <td>
+                <span class="tag customer-status-unverified tag-default">unblocked</span> 
+            </td>
+			{{end}}
+            <td class="customer-actions center">
+                <!-- Split button -->
+                <div class="btn-group">
+                    <a href="" class="btn more btn-secondary">Delete</a>
+                </div>
+				<div class="btn-group">
+                    <a href="" class="btn more btn-secondary">UnBlock</a>
+                </div>
+            </td>
+            </tr>
+			{{end}} {{end}}
+    </table>
+									{{if .Users}}
+									{{.Pagination.Nav "/cp/users" .URLQueryParams}}
+									{{end}}
+</div>
+<div class="delete-popup">
+    <div class="delete-form">
+        <form id="delete-customer-form">
+            <input class="form-control username" required name="username" data-customer-username="" placeholder="username" />
+            <button type="submit" class="btn btn-danger btn-block" >delete</button>
+        </form>
+        <button class="btn btn-secondary btn-block cancel-deletation" >cancel</button>
+    </div>
+</div>
+<nav id="admin-bar">
+    <a href="/cp" class="logo">
+        <img src="../../../uploads/files/logo.png" />
+    </a>
+</nav>

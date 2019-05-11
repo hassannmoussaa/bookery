@@ -18,14 +18,19 @@ type UserAuthCtrl struct {
 func loginUser(email string, password string) (int, string, *models.User, error) {
 	requestedUser := models.GetUserByEmail(email)
 	if requestedUser != nil {
-		jwtAuth := auth.GetJWTAuth()
-		if auth.CompareHashAndPassword(password, requestedUser.Password()) {
-			auth.ResetUserAttempts(int(requestedUser.ID()))
-			token, err := jwtAuth.GenerateToken(int(requestedUser.ID()), "user")
-			if err != nil {
-				return http.StatusInternalServerError, "", nil, nil
+		if models.CheckIFUserBlocked(requestedUser.ID()) == true {
+			return http.StatusForbidden, "", nil, errors.New("account_is_blocked")
+		} else {
+			jwtAuth := auth.GetJWTAuth()
+			if auth.CompareHashAndPassword(password, requestedUser.Password()) {
+				auth.ResetUserAttempts(int(requestedUser.ID()))
+				token, err := jwtAuth.GenerateToken(int(requestedUser.ID()), "user")
+				if err != nil {
+					return http.StatusInternalServerError, "", nil, nil
+				}
+				return http.StatusOK, token, requestedUser, nil
 			}
-			return http.StatusOK, token, requestedUser, nil
+			return http.StatusUnauthorized, "", nil, errors.New("authentication_credentials_invalid")
 		}
 		return http.StatusUnauthorized, "", nil, errors.New("authentication_credentials_invalid")
 	}

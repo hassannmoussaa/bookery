@@ -1,8 +1,12 @@
 {{template "_head.html" . }}
-{{if IsCPPage .PageName }}
-{{template "cp/_index.html" . }}
+{{if eq .PageName "cp-users" }}
+{{template "cp/_users.html" . }}
+{{else if eq .PageName "cp-dashboard"}}
+{{template "cp/_dashboard.html" . }}
 {{else if eq .PageName "cp-login"}}
 {{template "cp/_login.html" . }}
+{{else if eq .PageName "cp-users"}}
+{{template "cp/_users.html" . }}
 {{else if eq .PageName "unlock-admin-account"}}
 {{template "_unlock-admin-account.html" . }}
 {{else}}

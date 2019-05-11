@@ -1,6 +1,67 @@
-<h2>Upload Example</h2>
-<hr />
-<form enctype="multipart/form-data" id="upload-form">
-    <input type="file" name="files" multiple id="files" />
-    <button type="submit" id="upload">upload</button>
-</form>
+<div class="container admin-dashboard">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="box customers-box">
+                <i class="dripicons-user-group icon"></i>
+                <a href="/cp/users" class="content">
+                 <div class="count">{{.UsersCount}}</div>
+                 Users
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="box stores-box">
+                <i class="dripicons-to-do icon"></i>
+                <a href="https://market.laymoonapp.com/admin/stores" class="content">
+                 <div class="count">{{.OrderCount}}</div>
+                 Orders
+                </a>
+            </div>
+        </div>        
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="box attributes-box">
+                <i class="dripicons-bookmarks icon"></i>
+                <a href="https://market.laymoonapp.com/admin/attributes" class="content">
+                 <div class="count">{{.BooksCount}}</div>
+                 Books
+                </a>
+            </div>
+        </div>        
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="box categories-box">
+                <i class="dripicons-folder icon"></i>
+                <a href="https://market.laymoonapp.com/admin/categories" class="content">
+                 <div class="count">{{.CategoriesCount}}</div>
+                 categories
+                </a>
+            </div>
+        </div>    
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="box orders-box">
+                <i class="dripicons-card icon"></i>
+                <a href="https://market.laymoonapp.com/admin/orders" class="content">
+                 <div class="count">{{.CardOrdersCount}}</div>
+                 Card orders
+                </a>
+            </div>
+        </div>
+		  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="box orders-box">
+                <i class="dripicons-user icon"></i>
+                <a href="https://market.laymoonapp.com/admin/orders" class="content">
+                 <div class="count">{{.AdminsCount}}</div>
+						Admins
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav id="admin-bar">
+    <a href="/cp" class="logo">
+        <img src="../../../uploads/files/logo.png" />
+    </a>
+</nav>
+
+<footer id="admin-footer">
+</footer>
