@@ -35,6 +35,11 @@ func Register() *fastmux.Mux {
 	router.Get("/404").ThenFunc(notFoundCtrl.Get)
 	router.Get("/cp/login").ThenFunc(cpCtrl.Login)
 	router.Get("/cp").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.Dashboard)
+	router.Get("/cp/users/:search").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.Users)
 	router.Get("/cp/users").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.Users)
+	router.Get("/cp/orders").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.Orders)
+	router.Get("/cp/categories").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.Categories)
+	router.Get("/cp/category/add").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.AddCategory)
+
 	return router
 }

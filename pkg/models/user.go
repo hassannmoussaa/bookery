@@ -67,7 +67,7 @@ func (this *User) Email() string {
 	return this.email
 }
 func (this *User) FullName() string {
-	return this.full_address
+	return this.full_name
 }
 func (this *User) Password() string {
 	return this.password
@@ -262,6 +262,76 @@ func GetUsers(page int32, count int32, sinceID int32) ([]*User, bool, int32) {
 			values[j] = count * 4
 		}
 		j++
+	}
+	values = values[:j]
+	rows, err := connection.Query(sql, values...)
+	defer rows.Close()
+	if err != nil {
+		clean.Error(err)
+		return nil, false, 0
+	}
+	users := []*User{}
+	for rows.Next() {
+		user := &User{}
+		err = rows.Scan(&user.id, &user.full_name, &user.email, &user.password, &user.full_address, &user.phone_number, &user.user_credit, &user.is_blocked)
+		if err != nil {
+			clean.Error(err)
+			continue
+		}
+		users = append(users, user)
+	}
+	var hasMore bool
+	var nextPagesCount int32
+	usersCount := int32(len(users))
+	if (sinceID != 0 && count > 0) || (page <= 0 && count > 0) {
+		if usersCount > count {
+			hasMore = true
+			users = users[:count]
+		}
+	} else if page > 0 {
+		if usersCount > count && count > 0 {
+			hasMore = true
+			nextPagesCount = int32(math.Ceil(float64(usersCount)/float64(count))) - 1
+			users = users[:count]
+		}
+	}
+	return users, hasMore, nextPagesCount
+}
+func GetSimilariUsers(page int32, count int32, sinceID int32, search string) ([]*User, bool, int32) {
+	search = strings.ToLower(search)
+	sql := "SELECT id, coalesce(full_name, '') , coalesce(email, ''), coalesce(password, ''), coalesce(full_address, ''), coalesce(phone_number, ''), coalesce(user_credit, 0), coalesce(is_blocked, false)  FROM " + db.UserTable + " WHERE full_name LIKE $1"
+	values := make([]interface{}, 3)
+	j := 1
+	if sinceID > 0 {
+		sql += " WHERE "
+	}
+	if sinceID > 0 {
+		sql += "id<$" + strconv.Itoa(j+1)
+		values[j] = sinceID
+		j++
+	}
+	sql += ` ORDER BY id DESC`
+	if sinceID == 0 {
+		if page > 0 {
+			offset := (page - 1) * count
+			sql += " OFFSET $" + strconv.Itoa(j+1)
+			values[j] = offset
+			j++
+		}
+	}
+	if count > 0 {
+		sql += " LIMIT $" + strconv.Itoa(j+1)
+		if (sinceID != 0 && count > 0) || (page <= 0 && count > 0) {
+			values[j] = count + 1
+		} else {
+			values[j] = count * 4
+		}
+		j++
+	}
+	if len(search) >= 2 {
+		values[0] = search[0:2] + "%"
+	} else {
+		values[0] = search + "%"
 	}
 	values = values[:j]
 	rows, err := connection.Query(sql, values...)

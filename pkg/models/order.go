@@ -194,7 +194,7 @@ func DeleteOrderByUserId(userid int32) bool {
 	return false
 }
 func GetOrders(page int32, count int32, sinceID int32) ([]*Order, bool, int32) {
-	sql := "SELECT id,  user_id, book_id, transaction_id, coalesce(date, ''), coalesce(order_status, ''), coalesce(delevery_method, '') FROM " + db.OrderTable
+	sql := "SELECT id,  user_id, book_id, transaction_id, coalesce(date, ''), coalesce(order_status, ''), coalesce(delivery_method, '') FROM " + db.OrderTable
 	values := make([]interface{}, 3)
 	j := 0
 	if sinceID > 0 {
@@ -263,6 +263,7 @@ func GetOrders(page int32, count int32, sinceID int32) ([]*Order, bool, int32) {
 	}
 	return orders, hasMore, nextPagesCount
 }
+
 func GetOrdersCount() int {
 	sql := "SELECT COUNT(*) FROM " + db.OrderTable
 	row := connection.QueryRow(sql)

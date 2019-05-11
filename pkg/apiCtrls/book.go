@@ -7,6 +7,7 @@ import (
 	"github.com/hassannmoussaa/bookery/pkg/models"
 	"github.com/hassannmoussaa/pill.go/fastmux"
 	"github.com/hassannmoussaa/pill.go/helpers"
+	"github.com/hassannmoussaa/pill.go/uploader"
 	"github.com/valyala/fasthttp"
 )
 
@@ -52,6 +53,87 @@ func (this *BookCtrl) Delete(requestCtx *fasthttp.RequestCtx) {
 		}
 	} else {
 		this.Fail(requestCtx, nil, "book_cannot_be_deleted", 400)
+	}
+}
+func (this *BookCtrl) UploadFrontImage(requestCtx *fasthttp.RequestCtx) {
+
+	var err error
+	multipartForm, err := requestCtx.MultipartForm()
+
+	if err == nil {
+		multipleUpload := uploader.MultipleUpload{FormData: multipartForm, FilesInputName: "front", FileType: "image"}
+		multipleUpload.SetUploadDir("books/front")
+		var pictures []string
+		err, pictures = multipleUpload.Upload()
+		if err == nil {
+			if pictures != nil && len(pictures) > 0 {
+				data := struct {
+					Name string `json:"name,omitempty"`
+					URL  string `json:"url,omitempty"`
+				}{pictures[0], multipleUpload.UrlOfFile(pictures[0])}
+				this.Success(requestCtx, data, "picture_was_uploaded_successfully", 201)
+			} else {
+				this.ValidationError(requestCtx, nil, "please_select_a_picture")
+			}
+		} else {
+			this.ValidationError(requestCtx, nil, err.Error())
+		}
+	} else {
+		this.ServerError(requestCtx, "server_error")
+	}
+}
+func (this *BookCtrl) UploadBackImage(requestCtx *fasthttp.RequestCtx) {
+
+	var err error
+	multipartForm, err := requestCtx.MultipartForm()
+
+	if err == nil {
+		multipleUpload := uploader.MultipleUpload{FormData: multipartForm, FilesInputName: "back", FileType: "image"}
+		multipleUpload.SetUploadDir("books/back")
+		var pictures []string
+		err, pictures = multipleUpload.Upload()
+		if err == nil {
+			if pictures != nil && len(pictures) > 0 {
+				data := struct {
+					Name string `json:"name,omitempty"`
+					URL  string `json:"url,omitempty"`
+				}{pictures[0], multipleUpload.UrlOfFile(pictures[0])}
+				this.Success(requestCtx, data, "picture_was_uploaded_successfully", 201)
+			} else {
+				this.ValidationError(requestCtx, nil, "please_select_a_picture")
+			}
+		} else {
+			this.ValidationError(requestCtx, nil, err.Error())
+		}
+	} else {
+		this.ServerError(requestCtx, "server_error")
+	}
+}
+func (this *BookCtrl) UploadSideImage(requestCtx *fasthttp.RequestCtx) {
+
+	var err error
+	multipartForm, err := requestCtx.MultipartForm()
+
+	if err == nil {
+		multipleUpload := uploader.MultipleUpload{FormData: multipartForm, FilesInputName: "side", FileType: "image"}
+		multipleUpload.SetUploadDir("books/side")
+		var pictures []string
+		err, pictures = multipleUpload.Upload()
+		if err == nil {
+			if pictures != nil && len(pictures) > 0 {
+				data := struct {
+					Name string `json:"name,omitempty"`
+					URL  string `json:"url,omitempty"`
+				}{pictures[0], multipleUpload.UrlOfFile(pictures[0])}
+				this.Success(requestCtx, data, "picture_was_uploaded_successfully", 201)
+			} else {
+				this.ValidationError(requestCtx, nil, "please_select_a_picture")
+			}
+		} else {
+			this.ValidationError(requestCtx, nil, err.Error())
+		}
+	} else {
+		this.ServerError(requestCtx, "server_error")
 	}
 }
 func ParseBookFromRequest(requestCtx *fasthttp.RequestCtx) *models.Book {

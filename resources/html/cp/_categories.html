@@ -1,0 +1,30 @@
+<div class="container admin-categories">
+    <div class="categories-action">
+        <a class="btn btn-primary add" href="/cp/category/add" >add</a>
+    </div>
+    <table class="table categories-table">
+        <tr>
+            <th>#</th>
+            <th>name</th>
+            <th>action</th>
+        </tr>
+        {{if .Categories}} {{range $i, $category := .Categories}}
+        
+        <tr>
+            <td class="category-id"><a href="/admin/categories/1">{{$category.ID}}</a></td>
+            <td class="category-name"><a href="/admin/categories/1" title="clothing">{{$category.CategoryName}}</a></td>
+            <td class="category-actions center">
+                <!-- Split button -->
+                <div class="btn-group">
+                    <a onclick="DeleteCategory({{$category.ID}})" class="btn more btn-secondary">delete</a>
+                </div>
+            </td>
+        </tr>
+		{{end}} {{end}} 
+    </table>
+</div>
+<nav id="admin-bar">
+    <a href="/cp" class="logo">
+        <img src="../../../uploads/files/logo.png" />
+    </a>
+</nav>

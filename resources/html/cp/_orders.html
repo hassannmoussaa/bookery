@@ -1,0 +1,73 @@
+
+<div class="container admin-customers">
+   
+		
+    <table class="table customers-table">
+        <tr>
+            <th>#</th>
+            <th>User Name</th>
+            <th>Book Full Name</th>
+			<th>TransactionID</th>
+		    <th>Date</th>
+			<th>Order Status</th>
+            <th>Delivery Method</th>
+            <th>action</th>
+        </tr>
+        	{{if .Orders}} {{range $i, $order := .Orders}}
+		
+        <tr class="customer customer-2311">
+		   <td class="customer-username">
+               #{{$order.ID}}
+              
+            </td>
+               <td class="customer-username">
+                <a href="/cp/users/{{$order.User.FullName}}" title="jimmy chua">                    
+               {{$order.User.FullName}}
+                </a>
+            </td>
+           
+              <td class="customer-username">
+                <a href="/cp/books/ {{$order.Book.BookName}}" title="jimmy chua">                    
+               {{$order.Book.BookName}}
+                </a>
+            </td>
+		 <td class="customer-username">
+                <a href="/cp/books/ {{$order.Transaction.ID}}" title="jimmy chua">                    
+               {{$order.Transaction.ID}}
+                </a>
+            </td>
+			<td class="customer-name">
+                 {{$order.Date}}
+            </td>
+				
+			
+		
+            <td>
+                <span class="tag customer-status-verified tag-default">{{$order.OrderStatus}}</span> 
+            </td>
+			<td class="customer-name">
+                {{$order.DeliveryMethod}}
+            </td>
+		
+            <td class="customer-actions center">
+                <!-- Split button -->
+                <div class="btn-group">
+                    <a onclick="DeleteUser({{$order.ID}})"  class="btn more btn-secondary">Delete</a>
+                </div>
+				<div class="btn-group">
+                    <a onclick="UnBlockUser({{$order.ID}})" class="btn more btn-secondary">Set As Complited</a>
+                </div>
+            </td>
+            </tr>
+			{{end}} {{end}}
+    </table>
+									{{if .Orders}}
+									{{.Pagination.Nav "/cp/orders" .URLQueryParams}}
+									{{end}}
+</div>
+
+<nav id="admin-bar">
+    <a href="/cp" class="logo">
+        <img src="../../../uploads/files/logo.png" />
+    </a>
+</nav>

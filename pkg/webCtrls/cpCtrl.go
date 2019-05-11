@@ -3,6 +3,7 @@ package webCtrls
 import (
 	"github.com/hassannmoussaa/bookery/pkg/appCtx"
 	"github.com/hassannmoussaa/bookery/pkg/viewsmodels"
+	"github.com/hassannmoussaa/pill.go/fastmux"
 	"github.com/valyala/fasthttp"
 )
 
@@ -27,6 +28,22 @@ func (this *CPCtrl) Dashboard(requestCtx *fasthttp.RequestCtx) {
 }
 func (this *CPCtrl) Users(requestCtx *fasthttp.RequestCtx) {
 	ctx := appCtx.Get(requestCtx)
-	vm := viewsmodels.GetCPUsers(ctx)
+	search := fastmux.GetParam(requestCtx, "search")
+	vm := viewsmodels.GetCPUsers(ctx, search)
+	this.Write(requestCtx, vm)
+}
+func (this *CPCtrl) Orders(requestCtx *fasthttp.RequestCtx) {
+	ctx := appCtx.Get(requestCtx)
+	vm := viewsmodels.GetCPOrders(ctx)
+	this.Write(requestCtx, vm)
+}
+func (this *CPCtrl) Categories(requestCtx *fasthttp.RequestCtx) {
+	ctx := appCtx.Get(requestCtx)
+	vm := viewsmodels.GetCPCategories(ctx)
+	this.Write(requestCtx, vm)
+}
+func (this *CPCtrl) AddCategory(requestCtx *fasthttp.RequestCtx) {
+	ctx := appCtx.Get(requestCtx)
+	vm := viewsmodels.GetCPAddCategory(ctx)
 	this.Write(requestCtx, vm)
 }

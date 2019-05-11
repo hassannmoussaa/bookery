@@ -39,17 +39,12 @@ func (this *UserCtrl) GetMe(requestCtx *fasthttp.RequestCtx) {
 
 func (this *UserCtrl) Delete(requestCtx *fasthttp.RequestCtx) {
 	userId, _ := strconv.Atoi(fastmux.GetParam(requestCtx, "user_id"))
-	ctx := appCtx.Get(requestCtx)
-	if int32(userId) != ctx.LoggedUser.ID() {
-		if ok := models.DeleteUserBookByUserId(int32(userId)); ok {
-			if ok = models.DeleteOrderByUserId(int32(userId)); ok {
-				if ok = models.DeleteTransactionByUserId(int32(userId)); ok {
-					if ok = models.DeleteCardOrderByUserId(int32(userId)); ok {
-						if err := models.DeleteUser(int32(userId)); err {
-							this.Success(requestCtx, nil, "user_was_deleted_successfully", 200)
-						} else {
-							this.Fail(requestCtx, nil, "user_cannot_be_deleted", 400)
-						}
+	if ok := models.DeleteUserBookByUserId(int32(userId)); ok {
+		if ok = models.DeleteOrderByUserId(int32(userId)); ok {
+			if ok = models.DeleteTransactionByUserId(int32(userId)); ok {
+				if ok = models.DeleteCardOrderByUserId(int32(userId)); ok {
+					if err := models.DeleteUser(int32(userId)); err {
+						this.Success(requestCtx, nil, "user_was_deleted_successfully", 200)
 					} else {
 						this.Fail(requestCtx, nil, "user_cannot_be_deleted", 400)
 					}
@@ -59,13 +54,12 @@ func (this *UserCtrl) Delete(requestCtx *fasthttp.RequestCtx) {
 			} else {
 				this.Fail(requestCtx, nil, "user_cannot_be_deleted", 400)
 			}
-
 		} else {
 			this.Fail(requestCtx, nil, "user_cannot_be_deleted", 400)
 		}
 
 	} else {
-		this.Fail(requestCtx, nil, "cannot_delete_your_self", 400)
+		this.Fail(requestCtx, nil, "user_cannot_be_deleted", 400)
 	}
 }
 func (this *UserCtrl) Block(requestCtx *fasthttp.RequestCtx) {

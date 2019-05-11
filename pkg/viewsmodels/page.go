@@ -4,8 +4,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/hassannmoussaa/pill.go/antiCSRF"
 	"github.com/hassannmoussaa/bookery/pkg/appCtx"
+	"github.com/hassannmoussaa/pill.go/antiCSRF"
 )
 
 type Page struct {
@@ -21,6 +21,7 @@ type Page struct {
 	URLQueryParams  map[string]string
 	IsAuthenticated bool
 	CSRFToken       *CSRFToken
+	Link            string
 }
 
 func (this *Page) SetTitle(value string) {
@@ -99,6 +100,7 @@ func NewPage(pageName string, context *appCtx.Context, active ...interface{}) *P
 	page.SetMetas()
 	page.SetURL(context.URLPath)
 	page.SetCSRFToken(context.CSRFToken)
+	page.Link = "http://192.168.0.108:9000"
 	urlQueryParams := map[string]string{}
 	//set query params
 	page.URLQueryParams = urlQueryParams

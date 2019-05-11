@@ -1,6 +1,12 @@
 {{template "_head.html" . }}
 {{if eq .PageName "cp-users" }}
 {{template "cp/_users.html" . }}
+{{else if eq .PageName "cp-orders"}}
+{{template "cp/_orders.html" . }}
+{{else if eq .PageName "cp-addcat"}}
+{{template "cp/_addcat.html" . }}
+{{else if eq .PageName "cp-categories"}}
+{{template "cp/_categories.html" . }}
 {{else if eq .PageName "cp-dashboard"}}
 {{template "cp/_dashboard.html" . }}
 {{else if eq .PageName "cp-login"}}

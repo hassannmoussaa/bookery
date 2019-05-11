@@ -31,11 +31,33 @@ func (this *CategoryCtrl) Add(requestCtx *fasthttp.RequestCtx) {
 
 func (this *CategoryCtrl) Delete(requestCtx *fasthttp.RequestCtx) {
 	categoryId, _ := strconv.Atoi(fastmux.GetParam(requestCtx, "category_id"))
-	if err := models.DeleteCategory(int32(categoryId)); err {
-		this.Success(requestCtx, nil, "category_was_deleted_successfully", 200)
+	if models.GetBookByCatId(int32(categoryId)) != nil {
+		if ok := models.DeleteOrderByBookId(models.GetBookByCatId(int32(categoryId)).ID()); ok {
+			if ok := models.DeleteUserBookByBookId(models.GetBookByCatId(int32(categoryId)).ID()); ok {
+				if ok := models.DeleteBookByCategory(int32(categoryId)); ok {
+					if err := models.DeleteCategory(int32(categoryId)); err {
+						this.Success(requestCtx, nil, "category_was_deleted_successfully", 200)
+					} else {
+						this.Fail(requestCtx, nil, "category_cannot_be_deleted", 400)
+					}
+				} else {
+					this.Fail(requestCtx, nil, "category_cannot_be_deleted", 400)
+
+				}
+			} else {
+				this.Fail(requestCtx, nil, "category_cannot_be_deleted", 400)
+			}
+		} else {
+			this.Fail(requestCtx, nil, "category_cannot_be_deleted", 400)
+		}
 	} else {
-		this.Fail(requestCtx, nil, "category_cannot_be_deleted", 400)
+		if err := models.DeleteCategory(int32(categoryId)); err {
+			this.Success(requestCtx, nil, "category_was_deleted_successfully", 200)
+		} else {
+			this.Fail(requestCtx, nil, "category_cannot_be_deleted", 400)
+		}
 	}
+
 }
 func ParseCategoryFromRequest(requestCtx *fasthttp.RequestCtx) *models.Category {
 	category := &models.Category{}

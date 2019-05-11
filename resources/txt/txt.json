@@ -27,7 +27,11 @@
         "account_was_unlocked": "your account was unlocked",
         "failed_to_unlock_the_account": "failed to unlock the account",
         "dashboard": "DashBoard",
-        "users": "All User"
+        "users": "All User",
+        "orders" : "All Orders",
+        "categories" : "All Categories",
+        "addcat" : "Add Category"
+        
     },
     "th": {
         "name": "name",

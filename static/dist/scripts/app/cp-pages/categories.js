@@ -1,0 +1,1 @@
+function DeleteCategory(e){require(["jquery","requestjs","alertjs"],function(t,n,o){var a=(new n).init(_APIURL+"/admin/categories/"+e);a.onFailure(function(e){o.alert(e.status,e.message)}),a.onSuccess(function(){document.location.reload()}),a.onComplete(function(){popupjs.hide()}),a.delete();var i=t("#alert");i.length>0&&i.css({top:"15px"})})}

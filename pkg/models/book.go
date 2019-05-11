@@ -180,11 +180,39 @@ func GetBookById(id int32) *Book {
 	}
 	return nil
 }
-
+func GetBookByCatId(catid int32) *Book {
+	if catid != 0 {
+		sql := "SELECT id, coalesce(book_name, ''), coalesce(author_name, ''), coalesce(page_count, 0), coalesce(quality, ''), coalesce(front_image, ''), coalesce(back_image, ''), coalesce(side_image, ''), coalesce(is_verified, false), coalesce(is_recived, false), coalesce(price, 0) FROM " + db.BookTable + " WHERE category_id=$1"
+		row := connection.QueryRow(sql, catid)
+		book := &Book{}
+		category := &Category{}
+		category.id = catid
+		err := row.Scan(&book.id, &book.book_name, &book.author_name, &book.page_count, &book.quality, &book.front_image, &book.back_image, &book.side_image, &book.is_verified, &book.is_recived, &book.price)
+		book.category = GetCategoryById(category.id)
+		if err != nil {
+			clean.Error(err)
+			return nil
+		}
+		return book
+	}
+	return nil
+}
 func DeleteBook(id int32) bool {
 	if id != 0 {
 		sql := "DELETE FROM " + db.BookTable + " WHERE id=$1"
 		_, err := connection.Exec(sql, id)
+		if err != nil {
+			clean.Error(err)
+			return false
+		}
+		return true
+	}
+	return false
+}
+func DeleteBookByCategory(catid int32) bool {
+	if catid != 0 {
+		sql := "DELETE FROM " + db.BookTable + " WHERE category_id=$1"
+		_, err := connection.Exec(sql, catid)
 		if err != nil {
 			clean.Error(err)
 			return false

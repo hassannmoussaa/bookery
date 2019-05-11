@@ -53,6 +53,10 @@ func Register(basePath string) *fastmux.Mux {
 	router.Post("/books").Use(middlewares.IsAuthenticatedUser).ThenFunc(bookCtrl.Add)
 	router.Delete("/admin/books/:book_id").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(bookCtrl.Delete)
 	router.Delete("/user/books/:book_id").Use(middlewares.IsAuthenticatedUser).ThenFunc(bookCtrl.Delete)
+	router.Delete("/books/front").Use(middlewares.IsAuthenticatedUser).ThenFunc(bookCtrl.UploadFrontImage)
+	router.Delete("/books/back").Use(middlewares.IsAuthenticatedUser).ThenFunc(bookCtrl.UploadSideImage)
+	router.Delete("/books/side").Use(middlewares.IsAuthenticatedUser).ThenFunc(bookCtrl.UploadSideImage)
+
 	//OrderCtrl
 	router.Post("/orders").Use(middlewares.IsAuthenticatedUser).ThenFunc(orderCtrl.Add)
 	router.Delete("/admin/orders/:order_id").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(orderCtrl.Delete)
