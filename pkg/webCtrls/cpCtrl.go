@@ -47,3 +47,24 @@ func (this *CPCtrl) AddCategory(requestCtx *fasthttp.RequestCtx) {
 	vm := viewsmodels.GetCPAddCategory(ctx)
 	this.Write(requestCtx, vm)
 }
+func (this *CPCtrl) Books(requestCtx *fasthttp.RequestCtx) {
+	ctx := appCtx.Get(requestCtx)
+	search := fastmux.GetParam(requestCtx, "search")
+	vm := viewsmodels.GetCPBooks(ctx, search)
+	this.Write(requestCtx, vm)
+}
+func (this *CPCtrl) Admins(requestCtx *fasthttp.RequestCtx) {
+	ctx := appCtx.Get(requestCtx)
+	vm := viewsmodels.GetCPAdmins(ctx)
+	this.Write(requestCtx, vm)
+}
+func (this *CPCtrl) AddAdmin(requestCtx *fasthttp.RequestCtx) {
+	ctx := appCtx.Get(requestCtx)
+	vm := viewsmodels.GetCPAddAdmin(ctx)
+	this.Write(requestCtx, vm)
+}
+func (this *CPCtrl) CardOrders(requestCtx *fasthttp.RequestCtx) {
+	ctx := appCtx.Get(requestCtx)
+	vm := viewsmodels.GetCPCardOrders(ctx)
+	this.Write(requestCtx, vm)
+}

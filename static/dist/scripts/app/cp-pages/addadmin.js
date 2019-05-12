@@ -1,0 +1,1 @@
+require(["jquery","requestjs","alertjs"],function(e,n,t){var a=e("#add-admin-form");a.length>0&&a.on("submit",function(e){e.preventDefault();var r=a.serializeArray(),s=(new n).init(_APIURL+"/admins",r);s.onFailure(function(e){t.alert(e.status,e.message)}),s.onSuccess(function(e){document.location="/cp/admins"}),s.post()});var r=e("#alert");r.length>0&&r.css({top:"15px"})});

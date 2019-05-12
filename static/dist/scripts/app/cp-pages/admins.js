@@ -1,0 +1,1 @@
+function DeleteAdmin(e){require(["jquery","requestjs","alertjs"],function(n,t,o){var i=(new t).init(_APIURL+"/admin/"+e);i.onFailure(function(e){o.alert(e.status,e.message)}),i.onSuccess(function(){document.location.reload()}),i.onComplete(function(){popupjs.hide()}),i.delete();var u=n("#alert");u.length>0&&u.css({top:"15px"})})}

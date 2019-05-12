@@ -52,10 +52,10 @@
             <td class="customer-actions center">
                 <!-- Split button -->
                 <div class="btn-group">
-                    <a onclick="DeleteUser({{$order.ID}})"  class="btn more btn-secondary">Delete</a>
+                    <a onclick="DeleteOrder({{$order.ID}})"  class="btn more btn-secondary">Delete</a>
                 </div>
 				<div class="btn-group">
-                    <a onclick="UnBlockUser({{$order.ID}})" class="btn more btn-secondary">Set As Complited</a>
+                    <a onclick="CompletOrder({{$order.ID}})" class="btn more btn-secondary">Set As Complited</a>
                 </div>
             </td>
             </tr>

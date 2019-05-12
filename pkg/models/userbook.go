@@ -111,7 +111,7 @@ func GetUserBookByUserId(userid int32) *UserBook {
 }
 func GetUserBookByBookId(bookid int32) *UserBook {
 	if bookid != 0 {
-		sql := "SELECT id , user_id FROM " + db.UserBookTable + " WHERE bookid=$1"
+		sql := "SELECT id , user_id FROM " + db.UserBookTable + " WHERE book_id=$1"
 		row := connection.QueryRow(sql, bookid)
 		userbook := &UserBook{}
 		user := &User{}
@@ -119,7 +119,7 @@ func GetUserBookByBookId(bookid int32) *UserBook {
 		book.id = bookid
 		err := row.Scan(&userbook.id, &user.id)
 		userbook.user = GetUserById(user.id)
-		userbook.book = GetBookById(book.id)
+		userbook.book = GetBookByIdWithOutUser(book.id)
 		if err != nil {
 			clean.Error(err)
 			return nil

@@ -1,0 +1,65 @@
+
+<div class="container admin-customers">
+   
+		
+    <table class="table customers-table">
+        <tr>
+            <th>#</th>
+            <th>User Name</th>
+            <th>Card Number</th>
+			<th>TransactionID</th>
+		    <th>Date</th>
+			<th>Credit</th>
+            <th>action</th>
+        </tr>
+        	{{if .CardOrders}} {{range $i, $cardorder := .CardOrders}}
+		
+        <tr class="customer customer-2311">
+		   <td class="customer-username">
+               #{{$cardorder.ID}}
+              
+            </td>
+               <td class="customer-username">
+                <a href="/cp/users/{{$cardorder.User.FullName}}" title="jimmy chua">                    
+               {{$cardorder.User.FullName}}
+                </a>
+            </td>
+           
+              <td class="customer-username">
+                <a title="jimmy chua">                    
+               {{$cardorder.CardNumber}}
+                </a>
+            </td>
+		 <td class="customer-username">
+                <a  title="jimmy chua">                    
+               {{$cardorder.Transaction.ID}}
+                </a>
+            </td>
+			<td class="customer-name">
+                 {{$cardorder.Date}}
+            </td>
+				<td class="customer-name">
+                 {{$cardorder.Credit}} BC
+            </td>
+		
+		
+            <td class="customer-actions center">
+                <!-- Split button -->
+                <div class="btn-group">
+                    <a onclick="DeleteCardOrder({{$cardorder.ID}})"  class="btn more btn-secondary">Delete</a>
+                </div>
+			
+            </td>
+            </tr>
+			{{end}} {{end}}
+    </table>
+									{{if .CardOrders}}
+									{{.Pagination.Nav "/cp/cardorders" .URLQueryParams}}
+									{{end}}
+</div>
+
+<nav id="admin-bar">
+    <a href="/cp" class="logo">
+        <img src="../../../uploads/files/logo.png" />
+    </a>
+</nav>

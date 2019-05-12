@@ -1,0 +1,152 @@
+
+<div class="container admin-customers">
+    <div class="toolbar">
+        <div class="search">
+
+        <input type="text" name="search" id="search" class="form-control" id="filter-search" placeholder="search" />
+		
+        </div>
+		 <div class="search">
+
+<input type="button" style="visibility:hidden" id="btnSearch"  name="btnSearch" value="Search" onclick="GoTo();" />
+		
+        </div>
+
+    </div>
+			<script>
+			document.getElementById("search")
+			.addEventListener("keyup", function(event) {
+			event.preventDefault();
+			if (event.keyCode === 13) {
+			document.getElementById("btnSearch").click();
+			}
+			});
+			function GoTo() {
+			if(document.getElementById("search").value == ""){
+			window.location = "{{.Link}}/cp/books/null";
+			}else{
+			window.location = "{{.Link}}/cp/books/" + document.getElementById("search").value;
+			}		
+			}
+			</script>
+    <table class="table customers-table">
+        <tr>
+            <th>#</th>
+            <th>Front Image</th>
+			<th>Back Image</th>
+			<th>Side Image</th>
+            <th>Book Name</th>
+			<th>Category Name</th>
+			<th>Author Name</th>
+            <th>User Name</th>
+			<th>Page Count</th>
+		    <th>Quality</th>
+			<th>Price</th>
+            <th>IsRecived</th>
+		    <th>IsVerified</th>
+            <th>action</th>
+        </tr>
+        	{{if .Books}} {{range $i, $book := .Books}}
+        <tr class="customer customer-2311">
+            <td class="customer-id">
+                <a href="" title="jimmy chua">                    
+                #{{$book.ID}}
+                </a>
+            </td>
+			{{if $book.FrontImage}}
+            <td>
+                <img  src="../../../uploads/books/front/{{$book.FrontImage}}"   width="200px" height="200px" />
+            </td>
+			{{else}}
+			<td>
+                <img src="../../../uploads/books/d.png" width="200px" height="200px" />
+            </td>
+			{{end}}
+			{{if $book.BackImage}}
+            <td>
+                <img  src="../../../uploads/books/front/{{$book.BackImage}}"   width="200px" height="200px" />
+            </td>
+			{{else}}
+			<td>
+                <img src="../../../uploads/books/d.png" width="200px" height="200px" />
+            </td>
+			{{end}}
+				{{if $book.SideImage}}
+            <td>
+                <img  src="../../../uploads/books/front/{{$book.SideImage}}"   width="200px" height="200px" />
+            </td>
+			{{else}}
+			<td>
+                <img src="../../../uploads/books/d.png" width="200px" height="200px" />
+            </td>
+			{{end}}
+			
+            <td class="customer-name">
+               {{$book.BookName}}
+            </td>
+			 <td class="customer-name">
+               {{$book.Category.CategoryName}}
+            </td>
+			 <td class="customer-name">
+               {{$book.AuthorName}}
+            </td>
+            <td class="customer-username">
+                <a href="/cp/users/{{$book.User.FullName}}" title="jimmy chua">                    
+               {{$book.User.FullName}}
+                </a>
+            </td>
+			<td class="customer-name">
+                 {{$book.PageCount}}
+            </td>
+			<td class="customer-name">
+                 {{$book.Quality}}
+            </td>
+				<td class="customer-name">
+                {{$book.Price}} BC
+            </td>
+			
+			{{if eq $book.IsRecived true}}
+            <td>
+                <span class="tag customer-status-verified tag-default">Recived</span> 
+            </td>
+			{{else}}
+				 <td>
+                <span class="tag customer-status-unverified tag-default">On Delevery</span> 
+            </td>
+			{{end}}
+				{{if eq $book.IsVerified true}}
+            <td>
+                <span class="tag customer-status-verified tag-default">Verified</span> 
+            </td>
+			{{else}}
+				 <td>
+                <span class="tag customer-status-unverified tag-default">UnVerified</span> 
+            </td>
+			{{end}}
+			
+			
+            <td class="customer-actions center">
+                <!-- Split button -->
+                <div class="btn-group">
+                    <a onclick="DeleteBook({{$book.ID}})"  class="btn more btn-secondary">Delete</a>
+                </div>
+				<div class="btn-group">
+                    <a onclick="ReciveBook({{$book.ID}})" class="btn more btn-secondary">Set As Recived</a>
+                </div>
+				<div class="btn-group">
+                    <a onclick="VerifyBook({{$book.ID}})" class="btn more btn-secondary">Set As Verified</a>
+                </div>
+            </td>
+            </tr>
+			{{end}} {{end}}
+    </table>
+									{{if .Books}}
+									{{.Pagination.Nav "/cp/books" .URLQueryParams}}
+									{{end}}
+</div>
+
+<nav id="admin-bar">
+    <a href="/cp" class="logo">
+        <img src="../../../uploads/files/logo.png" />
+    </a>
+</nav>

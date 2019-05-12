@@ -50,7 +50,14 @@ func (this *OrderCtrl) Delete(requestCtx *fasthttp.RequestCtx) {
 		this.Fail(requestCtx, nil, "order_cannot_be_deleted", 400)
 	}
 }
-
+func (this *OrderCtrl) Complete(requestCtx *fasthttp.RequestCtx) {
+	orderid, _ := strconv.Atoi(fastmux.GetParam(requestCtx, "order_id"))
+	if err := models.CompleteOrder(models.GetOrderById(int32(orderid))); err {
+		this.Success(requestCtx, nil, "order_was_set_completed_successfully", 200)
+	} else {
+		this.Fail(requestCtx, nil, "order_cannot_be_set_completed", 400)
+	}
+}
 func ParseOrderFromRequest(requestCtx *fasthttp.RequestCtx) *models.Order {
 	order := &models.Order{}
 	t := time.Now()

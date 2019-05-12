@@ -8,6 +8,7 @@ import (
 
 	"github.com/hassannmoussaa/bookery/pkg/db"
 	"github.com/hassannmoussaa/pill.go/clean"
+	"github.com/hassannmoussaa/pill.go/hooks"
 )
 
 type Book struct {
@@ -23,6 +24,7 @@ type Book struct {
 	is_verified bool
 	is_recived  bool
 	price       int
+	user        *User
 }
 
 func (this *Book) ToMap(prefix string, excluded bool, fields ...string) map[string]interface{} {
@@ -112,7 +114,9 @@ func (this *Book) IsRecived() bool {
 func (this *Book) Price() int {
 	return this.price
 }
-
+func (this *Book) User() *User {
+	return this.user
+}
 func (this *Book) SetID(value int32) {
 	this.id = value
 }
@@ -172,6 +176,25 @@ func GetBookById(id int32) *Book {
 		book.id = id
 		err := row.Scan(&book.book_name, &category.id, &book.author_name, &book.page_count, &book.quality, &book.front_image, &book.back_image, &book.side_image, &book.is_verified, &book.is_recived, &book.price)
 		book.category = GetCategoryById(category.id)
+		book.user = GetUserBookByBookId(book.id).User()
+
+		if err != nil {
+			clean.Error(err)
+			return nil
+		}
+		return book
+	}
+	return nil
+}
+func GetBookByIdWithOutUser(id int32) *Book {
+	if id != 0 {
+		sql := "SELECT coalesce(book_name, ''), category_id, coalesce(author_name, ''), coalesce(page_count, 0), coalesce(quality, ''), coalesce(front_image, ''), coalesce(back_image, ''), coalesce(side_image, ''), coalesce(is_verified, false), coalesce(is_recived, false), coalesce(price, 0) FROM " + db.BookTable + " WHERE id=$1"
+		row := connection.QueryRow(sql, id)
+		book := &Book{}
+		category := &Category{}
+		book.id = id
+		err := row.Scan(&book.book_name, &category.id, &book.author_name, &book.page_count, &book.quality, &book.front_image, &book.back_image, &book.side_image, &book.is_verified, &book.is_recived, &book.price)
+		book.category = GetCategoryById(category.id)
 		if err != nil {
 			clean.Error(err)
 			return nil
@@ -189,6 +212,8 @@ func GetBookByCatId(catid int32) *Book {
 		category.id = catid
 		err := row.Scan(&book.id, &book.book_name, &book.author_name, &book.page_count, &book.quality, &book.front_image, &book.back_image, &book.side_image, &book.is_verified, &book.is_recived, &book.price)
 		book.category = GetCategoryById(category.id)
+		book.user = GetUserBookByBookId(book.id).User()
+
 		if err != nil {
 			clean.Error(err)
 			return nil
@@ -217,6 +242,34 @@ func DeleteBookByCategory(catid int32) bool {
 			clean.Error(err)
 			return false
 		}
+		return true
+	}
+	return false
+}
+func SetBookAsRecived(book *Book) bool {
+	if book != nil {
+		book.is_recived = true
+		sql := "UPDATE " + db.BookTable + " SET is_recived=$1 WHERE id=$2"
+		_, err := connection.Exec(sql, book.is_recived, book.id)
+		if err != nil {
+			clean.Error(err)
+			return false
+		}
+		hooks.Main.DoAction("book_is_recived", book)
+		return true
+	}
+	return false
+}
+func SetBookAsVerified(book *Book) bool {
+	if book != nil {
+		book.is_verified = true
+		sql := "UPDATE " + db.BookTable + " SET is_verified=$1 WHERE id=$2"
+		_, err := connection.Exec(sql, book.is_verified, book.id)
+		if err != nil {
+			clean.Error(err)
+			return false
+		}
+		hooks.Main.DoAction("book_is_verified", book)
 		return true
 	}
 	return false
@@ -263,6 +316,80 @@ func GetBooks(page int32, count int32, sinceID int32) ([]*Book, bool, int32) {
 		book := &Book{}
 		category := &Category{}
 		err = rows.Scan(&book.id, &book.book_name, &category.id, &book.author_name, &book.page_count, &book.quality, &book.front_image, &book.back_image, &book.side_image, &book.is_verified, &book.is_recived, &book.price)
+		book.category = GetCategoryById(category.id)
+		book.user = GetUserBookByBookId(book.id).User()
+		if err != nil {
+			clean.Error(err)
+			continue
+		}
+		books = append(books, book)
+	}
+	var hasMore bool
+	var nextPagesCount int32
+	booksCount := int32(len(books))
+	if (sinceID != 0 && count > 0) || (page <= 0 && count > 0) {
+		if booksCount > count {
+			hasMore = true
+			books = books[:count]
+		}
+	} else if page > 0 {
+		if booksCount > count && count > 0 {
+			hasMore = true
+			nextPagesCount = int32(math.Ceil(float64(booksCount)/float64(count))) - 1
+			books = books[:count]
+		}
+	}
+	return books, hasMore, nextPagesCount
+}
+func GetSimilariBooks(page int32, count int32, sinceID int32, search string) ([]*Book, bool, int32) {
+	search = strings.ToLower(search)
+	sql := "SELECT id, coalesce(book_name, ''), category_id, coalesce(author_name, ''), coalesce(page_count, 0), coalesce(quality, ''), coalesce(front_image, ''), coalesce(back_image, ''), coalesce(side_image, ''), coalesce(is_verified, false), coalesce(is_recived, false), coalesce(price, 0)  FROM " + db.BookTable + " WHERE book_name LIKE $1"
+	values := make([]interface{}, 3)
+	j := 1
+	if sinceID > 0 {
+		sql += " WHERE "
+	}
+	if sinceID > 0 {
+		sql += "id<$" + strconv.Itoa(j+1)
+		values[j] = sinceID
+		j++
+	}
+	sql += ` ORDER BY id DESC`
+	if sinceID == 0 {
+		if page > 0 {
+			offset := (page - 1) * count
+			sql += " OFFSET $" + strconv.Itoa(j+1)
+			values[j] = offset
+			j++
+		}
+	}
+	if count > 0 {
+		sql += " LIMIT $" + strconv.Itoa(j+1)
+		if (sinceID != 0 && count > 0) || (page <= 0 && count > 0) {
+			values[j] = count + 1
+		} else {
+			values[j] = count * 4
+		}
+		j++
+	}
+	if len(search) >= 2 {
+		values[0] = search[0:2] + "%"
+	} else {
+		values[0] = search + "%"
+	}
+	values = values[:j]
+	rows, err := connection.Query(sql, values...)
+	defer rows.Close()
+	if err != nil {
+		clean.Error(err)
+		return nil, false, 0
+	}
+	books := []*Book{}
+	for rows.Next() {
+		book := &Book{}
+		category := &Category{}
+		err = rows.Scan(&book.id, &book.book_name, &category.id, &book.author_name, &book.page_count, &book.quality, &book.front_image, &book.back_image, &book.side_image, &book.is_verified, &book.is_recived, &book.price)
+		book.user = GetUserBookByBookId(book.id).User()
 		book.category = GetCategoryById(category.id)
 		if err != nil {
 			clean.Error(err)

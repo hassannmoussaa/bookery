@@ -1,0 +1,26 @@
+<div class="container admin-add-category">
+    <h3 class="title">add new admin : </h3>
+    <form id="add-admin-form" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="name">admin name :*</label>
+            <input required type="text" class="form-control" name="name" placeholder="admin name" id="name">
+        </div>
+		<div class="form-group">
+            <label for="name">admin email :*</label>
+            <input required type="text" class="form-control" name="email" placeholder="admin email" id="email">
+        </div>
+			<div class="form-group">
+            <label for="name">admin password :*</label>
+            <input required type="text" class="form-control" name="password" placeholder="admin password" id="password">
+        </div>
+        <div class="btns">
+            <a href="/cp/admins" class="btn btn-secondary cancel-btn">cancel</a>
+            <input type="submit" class="btn btn-primary add-btn" value="add" />
+        </div>
+    </form>
+</div>
+<nav id="admin-bar">
+    <a href="/cp" class="logo">
+        <img src="../../../uploads/files/logo.png" />
+    </a>
+</nav>

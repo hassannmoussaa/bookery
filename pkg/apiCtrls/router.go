@@ -56,10 +56,13 @@ func Register(basePath string) *fastmux.Mux {
 	router.Delete("/books/front").Use(middlewares.IsAuthenticatedUser).ThenFunc(bookCtrl.UploadFrontImage)
 	router.Delete("/books/back").Use(middlewares.IsAuthenticatedUser).ThenFunc(bookCtrl.UploadSideImage)
 	router.Delete("/books/side").Use(middlewares.IsAuthenticatedUser).ThenFunc(bookCtrl.UploadSideImage)
+	router.Post("/book/verify/:book_id").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(bookCtrl.Verify)
+	router.Post("/book/recive/:book_id").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(bookCtrl.Recive)
 
 	//OrderCtrl
 	router.Post("/orders").Use(middlewares.IsAuthenticatedUser).ThenFunc(orderCtrl.Add)
 	router.Delete("/admin/orders/:order_id").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(orderCtrl.Delete)
+	router.Post("/complet/orders/:order_id").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(orderCtrl.Complete)
 	router.Delete("/user/orders/:order_id").Use(middlewares.IsAuthenticatedUser).ThenFunc(orderCtrl.Delete)
 	router.Post("/upload").ThenFunc(uploadCtrl.Upload)
 	//CategoryCtrl

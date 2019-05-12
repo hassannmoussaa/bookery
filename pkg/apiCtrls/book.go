@@ -55,6 +55,22 @@ func (this *BookCtrl) Delete(requestCtx *fasthttp.RequestCtx) {
 		this.Fail(requestCtx, nil, "book_cannot_be_deleted", 400)
 	}
 }
+func (this *BookCtrl) Recive(requestCtx *fasthttp.RequestCtx) {
+	bookId, _ := strconv.Atoi(fastmux.GetParam(requestCtx, "book_id"))
+	if err := models.SetBookAsRecived(models.GetBookById(int32(bookId))); err {
+		this.Success(requestCtx, nil, "book_was_set_as_recived_successfully", 200)
+	} else {
+		this.Fail(requestCtx, nil, "book_cannot_be_set_as_recived", 400)
+	}
+}
+func (this *BookCtrl) Verify(requestCtx *fasthttp.RequestCtx) {
+	bookId, _ := strconv.Atoi(fastmux.GetParam(requestCtx, "book_id"))
+	if err := models.SetBookAsVerified(models.GetBookById(int32(bookId))); err {
+		this.Success(requestCtx, nil, "book_was_set_as_verified_successfully", 200)
+	} else {
+		this.Fail(requestCtx, nil, "book_cannot_be_set_as_verified", 400)
+	}
+}
 func (this *BookCtrl) UploadFrontImage(requestCtx *fasthttp.RequestCtx) {
 
 	var err error

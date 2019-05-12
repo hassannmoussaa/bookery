@@ -40,6 +40,11 @@ func Register() *fastmux.Mux {
 	router.Get("/cp/orders").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.Orders)
 	router.Get("/cp/categories").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.Categories)
 	router.Get("/cp/category/add").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.AddCategory)
+	router.Get("/cp/admins").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.Admins)
+	router.Get("/cp/admin/add").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.AddAdmin)
+	router.Get("/cp/books/:search").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.Books)
+	router.Get("/cp/books").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.Books)
+	router.Get("/cp/cardorders").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.CardOrders)
 
 	return router
 }

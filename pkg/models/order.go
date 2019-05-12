@@ -104,7 +104,7 @@ func (this *Order) SetDeliveryMethod(value string) {
 
 func AddOrder(order *Order) *Order {
 	if order != nil {
-		sql := "INSERT INTO " + db.OrderTable + " (user_id, book_id, transaction_id, date , order_status , delevery_method) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id;"
+		sql := "INSERT INTO " + db.OrderTable + " (user_id, book_id, transaction_id, date , order_status , delivery_method) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id;"
 		row := connection.QueryRow(sql, order.user.id, order.book.id, order.transaction.id, order.date, order.order_status, order.delivery_method)
 		err := row.Scan(&order.id)
 		if err != nil {
@@ -117,7 +117,7 @@ func AddOrder(order *Order) *Order {
 }
 func GetOrderById(id int32) *Order {
 	if id != 0 {
-		sql := "SELECT user_id, book_id, transaction_id, coalesce(date, ''), coalesce(order_status, ''), coalesce(delevery_method, '')  FROM " + db.OrderTable + " WHERE id=$1"
+		sql := "SELECT user_id, book_id, transaction_id, coalesce(date, ''), coalesce(order_status, ''), coalesce(delivery_method, '')  FROM " + db.OrderTable + " WHERE id=$1"
 		row := connection.QueryRow(sql, id)
 		order := &Order{}
 		order.id = id
@@ -138,7 +138,7 @@ func GetOrderById(id int32) *Order {
 }
 func GetOrderByUserId(userid int32) *Order {
 	if userid != 0 {
-		sql := "SELECT id,  book_id, transaction_id, coalesce(date, ''), coalesce(order_status, ''), coalesce(delevery_method, '') FROM " + db.OrderTable + " WHERE user_id=$1"
+		sql := "SELECT id,  book_id, transaction_id, coalesce(date, ''), coalesce(order_status, ''), coalesce(delivery_method, '') FROM " + db.OrderTable + " WHERE user_id=$1"
 		row := connection.QueryRow(sql, userid)
 		order := &Order{}
 		user := &User{}
@@ -185,6 +185,19 @@ func DeleteOrderByUserId(userid int32) bool {
 	if userid != 0 {
 		sql := "DELETE FROM " + db.OrderTable + " WHERE user_id=$1"
 		_, err := connection.Exec(sql, userid)
+		if err != nil {
+			clean.Error(err)
+			return false
+		}
+		return true
+	}
+	return false
+}
+func CompleteOrder(order *Order) bool {
+	if order != nil {
+		order.order_status = "completed"
+		sql := "UPDATE " + db.OrderTable + " SET order_status=$1 WHERE id=$2"
+		_, err := connection.Exec(sql, order.order_status, order.id)
 		if err != nil {
 			clean.Error(err)
 			return false

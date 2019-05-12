@@ -1,0 +1,1 @@
+function DeleteCardOrder(e){require(["jquery","requestjs","alertjs"],function(n,t,r){var o=(new t).init(_APIURL+"/admin/cardorders/"+e);o.onFailure(function(e){r.alert(e.status,e.message)}),o.onSuccess(function(){document.location.reload()}),o.onComplete(function(){popupjs.hide()}),o.delete();var a=n("#alert");a.length>0&&a.css({top:"15px"})})}
