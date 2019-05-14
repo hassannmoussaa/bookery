@@ -24,7 +24,7 @@ type User struct {
 	is_blocked   bool
 }
 
-func (this *User) ToMap(prefix string, excluded bool, fields ...string) map[string]interface{} {
+func (this *User) ToMap(useraccessToken string, prefix string, excluded bool, fields ...string) map[string]interface{} {
 	result := map[string]interface{}{}
 	if prefix != "" && !strings.HasSuffix(prefix, ".") {
 		prefix += "."
@@ -53,6 +53,9 @@ func (this *User) ToMap(prefix string, excluded bool, fields ...string) map[stri
 	}
 	if check(prefix+"is_blocked", fields...) {
 		result["is_blocked"] = this.IsBlocked()
+	}
+	if check(prefix+"access_token", fields...) {
+		result["access_token"] = useraccessToken
 	}
 	if len(result) == 0 {
 		return nil
@@ -197,7 +200,7 @@ func CheckIFUserBlocked(id int32) bool {
 	if id != 0 {
 		sql := "SELECT coalesce(is_blocked, false) FROM " + db.UserTable + " WHERE id=$1"
 		row := connection.QueryRow(sql, id)
-		err := row.Scan(isBlocked)
+		err := row.Scan(&isBlocked)
 		if err != nil {
 			clean.Error(err)
 			return false

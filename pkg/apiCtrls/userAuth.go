@@ -62,7 +62,7 @@ func (this *UserAuthCtrl) Login(requestCtx *fasthttp.RequestCtx) {
 		rememberMe := requestCtx.PostArgs().GetBool("remember_me")
 		auth.SetAccessTokenFastHttpCookie(requestCtx, accessToken, rememberMe)
 		fields, excluded := this.SetFields(requestCtx)
-		data := user.ToMap("", excluded, fields...)
+		data := user.ToMap(accessToken, "", excluded, fields...)
 		this.Success(requestCtx, data, "login_successfully")
 	}
 }

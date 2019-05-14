@@ -33,7 +33,10 @@ func Register() *fastmux.Mux {
 	cpCtrl := &CPCtrl{}
 
 	router.Get("/404").ThenFunc(notFoundCtrl.Get)
+	router.Get("/").ThenFunc(cpCtrl.Index)
+
 	router.Get("/cp/login").ThenFunc(cpCtrl.Login)
+	router.Get("/signup").Use(middlewares.IsAuthenticatedUserBot).ThenFunc(cpCtrl.SignUp)
 	router.Get("/cp").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.Dashboard)
 	router.Get("/cp/users/:search").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.Users)
 	router.Get("/cp/users").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cpCtrl.Users)

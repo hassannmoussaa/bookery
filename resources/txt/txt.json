@@ -34,7 +34,9 @@
         "books" : "All Books",
         "admins" : "All Admins",
         "addadmin" : "Add Admin",
-        "cardorders" : " All Card Orders"
+        "cardorders" : " All Card Orders",
+        "signup" : "SignUp",
+        "index" : "Official"
         
     },
     "th": {
@@ -106,7 +108,8 @@
         "user_was_unblocked_successfully" : "user was unblocked successfully",
         "order_was_set_completed_successfully" : "order was set completed successfully",
         "book_was_set_as_recived_successfully" : "book was set as recived successfully",
-        "book_was_set_as_verified_successfully" : "book was set as verified successfully"
+        "book_was_set_as_verified_successfully" : "book was set as verified successfully",
+        "user_set_signup" : "user set signup"
     },
     "failure_messages": {
         "authentication_credentials_invalid": "email or password is invalid",
@@ -130,6 +133,8 @@
         "order_cannot_be_set_completed" : "order cannot be set completed",
         "book_cannot_be_set_as_recived" : "book cannot be set as recived",
         "book_cannot_be_set_as_verified" : "book cannot be set as verified",
+        "data_is_invaild" : "data is invaild",
+        "no_to_page" : "no to page",
         "account_is_locked": "for security reasons your account is temporarily locked, please check your email inbox/junk"
     },
     "error_messages": {

@@ -32,6 +32,7 @@ func Register(basePath string) *fastmux.Mux {
 	categoryCtrl := &CategoryCtrl{}
 	userAuthCtrl := &UserAuthCtrl{}
 	uploadCtrl := &UploadCtrl{}
+	userBotConnection := &UserBotConnection{}
 	//AdminAuth
 	router.Post("/admins/auth").ThenFunc(adminAuthCtrl.Login)
 	router.Delete("/admins/auth").ThenFunc(adminAuthCtrl.Logout)
@@ -72,6 +73,11 @@ func Register(basePath string) *fastmux.Mux {
 	router.Post("/cardorders").Use(middlewares.IsAuthenticatedUser).ThenFunc(cardorderCtrl.Add)
 	router.Delete("/admin/cardorders/:card_order_id").Use(middlewares.IsAuthenticatedAdmin).ThenFunc(cardorderCtrl.Delete)
 	router.Delete("/user/cardorders/:card_order_id").Use(middlewares.IsAuthenticatedUser).ThenFunc(cardorderCtrl.Delete)
+
+	//Bot
+	router.Post("/settosignup").ThenFunc(userBotConnection.SetUserWantToSignUp)
+
+	router.Get("/gettopage/:user_id").ThenFunc(userBotConnection.GetUserToPage)
 
 	return router
 }

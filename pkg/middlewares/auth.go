@@ -67,6 +67,19 @@ func IsAuthenticatedAdmin(next fasthttp.RequestHandler) fasthttp.RequestHandler 
 	}
 	return fn
 }
+func IsAuthenticatedUserBot(next fasthttp.RequestHandler) fasthttp.RequestHandler {
+	fn := func(requestCtx *fasthttp.RequestCtx) {
+		if requestCtx.Request.Header.Cookie("UserResponsePath") == nil {
+			requestCtx.Redirect("/", 307)
+			return
+		} else {
+			if next != nil {
+				next(requestCtx)
+			}
+		}
+	}
+	return fn
+}
 func IsAuthenticatedUser(next fasthttp.RequestHandler) fasthttp.RequestHandler {
 	fn := func(requestCtx *fasthttp.RequestCtx) {
 		ctx := appCtx.Get(requestCtx)

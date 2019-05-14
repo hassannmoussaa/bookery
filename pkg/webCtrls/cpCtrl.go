@@ -68,3 +68,13 @@ func (this *CPCtrl) CardOrders(requestCtx *fasthttp.RequestCtx) {
 	vm := viewsmodels.GetCPCardOrders(ctx)
 	this.Write(requestCtx, vm)
 }
+func (this *CPCtrl) SignUp(requestCtx *fasthttp.RequestCtx) {
+	ctx := appCtx.Get(requestCtx)
+	vm := viewsmodels.GetCPSignUp(ctx)
+	this.Write(requestCtx, vm)
+}
+func (this *CPCtrl) Index(requestCtx *fasthttp.RequestCtx) {
+	ctx := appCtx.Get(requestCtx)
+	vm := viewsmodels.GetIndex(ctx)
+	this.Write(requestCtx, vm)
+}

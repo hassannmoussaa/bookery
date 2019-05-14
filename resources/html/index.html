@@ -1,29 +1,59 @@
-{{template "_head.html" . }}
+{{if eq .PageName "cp-signup"}}
+{{template "_signup.html" . }}
+{{end}}
+
 {{if eq .PageName "cp-users" }}
-{{template "cp/_users.html" . }}
+	{{template "_head.html" . }}
+	{{template "cp/_users.html" . }}
+	{{template "_footer.html" . }}
 {{else if eq .PageName "cp-orders"}}
-{{template "cp/_orders.html" . }}
+	{{template "_head.html" . }}
+	{{template "cp/_orders.html" . }}
+	{{template "_footer.html" . }}
+{{else if eq .PageName "index"}}
+	{{template "_head.html" . }}
+	{{template "_index.html" . }}
+	{{template "_footer.html" . }}
 {{else if eq .PageName "cp-books"}}
-{{template "cp/_books.html" . }}
+	{{template "_head.html" . }}
+	{{template "cp/_books.html" . }}
+	{{template "_footer.html" . }}
 {{else if eq .PageName "cp-addcat"}}
-{{template "cp/_addcat.html" . }}
+	{{template "_head.html" . }}
+	{{template "cp/_addcat.html" . }}
+	{{template "_footer.html" . }}
 {{else if eq .PageName "cp-cardorders"}}
-{{template "cp/_cardorders.html" . }}
+	{{template "_head.html" . }}
+	{{template "cp/_cardorders.html" . }}
+	{{template "_footer.html" . }}
 {{else if eq .PageName "cp-categories"}}
-{{template "cp/_categories.html" . }}
+	{{template "_head.html" . }}
+	{{template "cp/_categories.html" . }}
+	{{template "_footer.html" . }}
 {{else if eq .PageName "cp-admins"}}
-{{template "cp/_admins.html" . }}
+	{{template "_head.html" . }}
+	{{template "cp/_admins.html" . }}
+	{{template "_footer.html" . }}
 {{else if eq .PageName "cp-addadmin"}}
-{{template "cp/_addadmin.html" . }}
+	{{template "_head.html" . }}
+	{{template "cp/_addadmin.html" . }}
+	{{template "_footer.html" . }}
 {{else if eq .PageName "cp-dashboard"}}
-{{template "cp/_dashboard.html" . }}
+	{{template "_head.html" . }}
+	{{template "cp/_dashboard.html" . }}
+	{{template "_footer.html" . }}
 {{else if eq .PageName "cp-login"}}
-{{template "cp/_login.html" . }}
+	{{template "_head.html" . }}
+	{{template "cp/_login.html" . }}
+	{{template "_footer.html" . }}
 {{else if eq .PageName "cp-users"}}
-{{template "cp/_users.html" . }}
+	{{template "_head.html" . }}
+	{{template "cp/_users.html" . }}
+	{{template "_footer.html" . }}
 {{else if eq .PageName "unlock-admin-account"}}
 {{template "_unlock-admin-account.html" . }}
 {{else}}
+{{if ne .PageName "cp-signup"}}
 {{template "_not-found.html" . }}
 {{end}}
-{{template "_footer.html" . }}
+{{end}}

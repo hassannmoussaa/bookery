@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bookery || SignUp</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href=" {{GetStaticFileURLPath "/dist/signup/vendor/bootstrap/css/bootstrap.min.css" }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{GetStaticFileURLPath "/dist/signup/fonts/font-awesome-4.7.0/css/font-awesome.min.css" }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{GetStaticFileURLPath "/dist/signup/vendor/animate/animate.css" }}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{GetStaticFileURLPath "/dist/signup/vendor/css-hamburgers/hamburgers.min.css" }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{GetStaticFileURLPath "/dist/signup/vendor/select2/select2.min.css" }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{GetStaticFileURLPath "/dist/signup/css/util.css" }}">
+	<link rel="stylesheet" type="text/css" href="{{GetStaticFileURLPath "/dist/signup/css/main.css" }}">
+<!--===============================================================================================-->
+    <script>
+    var _PageName = "{{.PageName}}";
+    var _APIURL = "{{.APIHost}}";
+    var _WebHost = "{{.WebHost}}";
+    var _Domain = "{{.WebDomain}}";
+    var _IsCPPage = {{IsCPPage .PageName}};
+    var _CSRFToken = "{{.CSRFToken.Value}}";
+    var _URLQueryParams = {{ToJSON .URLQueryParams}};
+    var _AppVersion = "{{.AppVersion}}";
+    var _UploadsURLPath = "{{.UploadsURLPath}}";
+    var _StaticFilesURLPath = "{{.StaticFilesURLPath}}";
+    {{if .IsAuthenticated }}
+    {{end}}
+
+    </script>
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="../../uploads/files/img-01.png" alt="IMG">
+				</div>
+
+				<form class="login100-form validate-form" name="signup" id="signup">
+					<span class="login100-form-title">
+						Member Sign Up
+					</span>
+					<div class="wrap-input100 validate-input" data-validate = "Full Name ">
+						<input class="input100" type="text" name="full_name" id="full_name" placeholder="Full Name">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-address-card" aria-hidden="true"></i>
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" " name="email" id="email" placeholder="Email Address">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" id="password" name="password" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+						<div class="wrap-input100 validate-input" data-validate = "Full Address">
+						<input class="input100" type="text"  id="full_address" name="full_address" placeholder="Full Address">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-500px" aria-hidden="true"></i>
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Phone Number ">
+						<input class="input100" type="text" name="phone_number" id="phone_number" placeholder="Phone Number ">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-address-book" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<input type ="sibmit" ><button class="login100-form-btn">
+							 SignUp
+						</button> </input>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+<script>var requirejs = { waitSeconds: 0 };</script>
+		<script src="{{GetStaticFileURLPath "/dist/scripts/app.min.js" .AppVersion}}"></script>
+	<script src="{{GetStaticFileURLPath "/src/scripts/app/pages/cpp-signup.js"}}"></script>
+<!--===============================================================================================-->	
+	<script src="{{GetStaticFileURLPath "/dist/signup/vendor/jquery/jquery-3.2.1.min.js"}}"></script>
+<!--===============================================================================================-->
+	<script src="{{GetStaticFileURLPath "/dist/signup/vendor/bootstrap/js/popper.js"}}"></script>
+	<script src="{{GetStaticFileURLPath "/dist/signup/vendor/bootstrap/js/bootstrap.min.js"}}"></script>
+<!--===============================================================================================-->
+	<script src="{{GetStaticFileURLPath "/dist/signup/vendor/select2/select2.min.js"}}"></script>
+<!--===============================================================================================-->
+	<script src="{{GetStaticFileURLPath "/dist/signup/vendor/tilt/tilt.jquery.min.js"}}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{{GetStaticFileURLPath "/dist/signupjs/main.js"}}"></script>
+		
+		
+
+</body>
+</html>

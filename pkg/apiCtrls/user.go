@@ -33,7 +33,7 @@ func (this *UserCtrl) Add(requestCtx *fasthttp.RequestCtx) {
 func (this *UserCtrl) GetMe(requestCtx *fasthttp.RequestCtx) {
 	context := appCtx.Get(requestCtx)
 	fields, excluded := this.SetFields(requestCtx)
-	data := context.LoggedUser.ToMap("", excluded, fields...)
+	data := context.LoggedUser.ToMap("", "", excluded, fields...)
 	this.Success(requestCtx, data, "")
 }
 

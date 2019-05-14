@@ -14,7 +14,8 @@
     "csrf_encryption_key": "PlSZ96C31PokUj74",
     "cors_allowed_origins": [
         "http://192.168.0.108",
-        "http://192.168.0.108:9000"
+        "http://192.168.0.108:9000",
+        "https://metuo.serveo.net"
     ],
     "resources_dir_path": "resources",
     "jwt_private_key_path": "keys\\jwt\\private_key.pem",
